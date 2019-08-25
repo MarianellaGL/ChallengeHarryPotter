@@ -1,6 +1,6 @@
 package app.personajes;
 
-public class Muggle extends Personaje {
+public class Muggle extends Persona {
 
 
     
