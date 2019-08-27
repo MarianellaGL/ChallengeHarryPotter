@@ -1,6 +1,10 @@
 package app.personajes;
 
-public class Squib extends Mago {
+
+public class Squib extends Persona {
+
+	
+	
 
 
     

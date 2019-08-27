@@ -15,18 +15,11 @@ public class Mago extends Personaje implements IHacerMagia {
     public List<Hechizo> hechizos = new ArrayList<Hechizo>();
     public List<Artefacto> artefactos = new ArrayList<Artefacto>();
 
+
+
     @Override
     public void atacar(Personaje enemigo, Hechizo hechizo) {
 
-    }
-
-    public Mago(int poderInicial, int energiaMagica, boolean esMagoOscuro, List<Hechizo> hechizos,
-            List<Artefacto> artefactos) {
-        this.poderInicial = poderInicial;
-        this.energiaMagica = energiaMagica;
-        this.esMagoOscuro = esMagoOscuro;
-        this.hechizos = hechizos;
-        this.artefactos = artefactos;
     }
 
     public int getPoderInicial() {
@@ -68,5 +61,10 @@ public class Mago extends Personaje implements IHacerMagia {
     public void setArtefactos(List<Artefacto> artefactos) {
         this.artefactos = artefactos;
     }
+    
 
-}
+public void versus(){
+
+
+    System.out.println("Se inicia un nuevo duelo" );}}
+
