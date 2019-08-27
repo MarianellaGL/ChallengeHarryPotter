@@ -20,7 +20,12 @@ public class Mago extends Personaje implements IHacerMagia {
     @Override
     public void atacar(Personaje enemigo, Hechizo hechizo) {
 
+        enemigo.salud-=hechizo.nivelDaño;
+
+
     }
+
+
 
     public int getPoderInicial() {
         return poderInicial;

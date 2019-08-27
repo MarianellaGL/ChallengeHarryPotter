@@ -24,10 +24,13 @@ public class Personaje {
 
         return null;
 
-
-        
     }
 
+    public boolean estaVivo(){
+        if(salud>0)
 
-    
-}
+        return true;
+    }
+    return null;
+
+}}

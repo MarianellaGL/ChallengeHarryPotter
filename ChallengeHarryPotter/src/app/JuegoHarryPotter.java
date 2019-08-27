@@ -5,7 +5,6 @@ import java.util.List;
 
 import app.artefactos.Artefacto;
 import app.hechizos.HechizoAtaque;
-import app.hechizos.SectumSempra;
 import app.personajes.Mago;
 import app.personajes.Muggle;
 import app.personajes.Personaje;
@@ -47,13 +46,6 @@ public class JuegoHarryPotter {
         magoHarry.salud = 100 + 300;
 
         JuegoHarryPotter.LosMagos.add(magoHarry);
-
-        SectumSempra hechiAtaque = new SectumSempra();
-        hechiAtaque.esOscuro = true;
-        hechiAtaque.nivelDaño = 100;
-
-
-        JuegoHarryPotter.Atacan.add(hechiAtaque);
 
 
 
