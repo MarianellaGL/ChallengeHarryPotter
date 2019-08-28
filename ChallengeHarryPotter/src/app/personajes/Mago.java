@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import app.artefactos.Artefacto;
+import app.hechizos.CaveInimicum;
 import app.hechizos.Hechizo;
 import app.interfaces.IHacerMagia;
 
@@ -11,6 +12,8 @@ public class Mago extends Personaje implements IHacerMagia {
     public int poderInicial = 80;
     public int energiaMagica = 40;
     public boolean esMagoOscuro = false;
+    public int nivelVida = 100;
+
 
     public List<Hechizo> hechizos = new ArrayList<Hechizo>();
     public List<Artefacto> artefactos = new ArrayList<Artefacto>();
@@ -21,7 +24,8 @@ public class Mago extends Personaje implements IHacerMagia {
     public void atacar(Personaje enemigo, Hechizo hechizo) {
 
         enemigo.salud-=hechizo.nivelDaño;
-
+        if(hechizo.esOscuro)
+        this.esMagoOscuro=true;
 
     }
 
@@ -71,5 +75,10 @@ public class Mago extends Personaje implements IHacerMagia {
 public void versus(){
 
 
-    System.out.println("Se inicia un nuevo duelo" );}}
+    System.out.println("Se inicia un nuevo duelo" );}
+
+
+
+public void defenderse(Mago pj1, CaveInimicum hechiDefensa) {
+}}
 

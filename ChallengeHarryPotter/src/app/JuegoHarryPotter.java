@@ -12,6 +12,7 @@ import app.transportes.Transporte;
 
 public class JuegoHarryPotter {
 
+    public static final String Defen = null;
     public static List<Personaje> PersonajesJugables = new ArrayList<Personaje>();
     public static List<Artefacto> ArtefactosMagicos = new ArrayList<Artefacto>();
     public static List<Transporte> TransportesMagicos = new ArrayList<Transporte>();
@@ -20,22 +21,22 @@ public class JuegoHarryPotter {
     public static List<HechizoAtaque> Atacan = new ArrayList<HechizoAtaque>();
 
     public static Personaje ElegirPersonaje(String nombre) {
-        
+
         for (Personaje p : JuegoHarryPotter.PersonajesJugables) {
 
-            if (p.nombre == nombre )
+            if (p.nombre.equals(nombre))
 
-            return p;
-            
+                return p;
+
         }
         return null;
 
     }
 
-	public static void InicializarJuego() {
-    AgregarPersonaje();
+    public static void InicializarJuego() {
+        AgregarPersonaje();
     }
-    
+
     public static void AgregarPersonaje() {
 
         Mago magoHarry = new Mago();
@@ -46,10 +47,10 @@ public class JuegoHarryPotter {
         magoHarry.salud = 100 + 300;
 
         JuegoHarryPotter.LosMagos.add(magoHarry);
+        JuegoHarryPotter.PersonajesJugables.add(magoHarry);
 
 
-
-        Mago magoSnape =  new Mago();
+        Mago magoSnape = new Mago();
         magoSnape.nombre = "Severus Snape";
         magoSnape.estaVivo = true;
         magoSnape.energiaMagica = 40 + 150;
@@ -57,5 +58,17 @@ public class JuegoHarryPotter {
         magoSnape.salud = 100 + 500;
 
         JuegoHarryPotter.LosMagos.add(magoSnape);
+        JuegoHarryPotter.PersonajesJugables.add(magoSnape);
+
     }
+    public static Artefacto elegirArtefacto(String nombre){
+        for (Artefacto tefacto : Artefacto.Ar){
+        if (tefacto.nombreArtefacto.equals ("nombre"))
+        
+            return tefacto;
+        }
+        
+        return null;
+        
+        }
 }

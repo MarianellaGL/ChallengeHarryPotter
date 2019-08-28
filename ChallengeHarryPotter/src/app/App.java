@@ -1,5 +1,7 @@
 package app;
 
+import app.hechizos.CaveInimicum;
+import app.hechizos.Hechizo;
 import app.hechizos.SectumSempra;
 import app.personajes.Mago;
 
@@ -16,18 +18,31 @@ public class App {
         SectumSempra hechiAtaque = new SectumSempra();
         hechiAtaque.esOscuro = true;
         hechiAtaque.nivelDaño = 100;
-
-        //tenemos que hacer que pj1 y pj 2 peleen y que alguno de los dos gane o pierda, por ahora probemos algo tranqui.
-
-
-        JuegoHarryPotter.Atacan.add(hechiAtaque);
-
-        pj2.atacar(pj1, hechiAtaque);
-
-        if(pj1.estaVivo)
         
 
+        CaveInimicum hechiDefensa = new CaveInimicum();
+        hechiDefensa.esOscuro = false;
+        hechiDefensa.nivelDaño = 25;
+        hechiDefensa.nivelDefensa = 75;
 
+        //tenemos que hacer que pj1 y pj 2 peleen y que alguno de los dos gane o pierda, por ahora probemos algo tranqui.
+        
+        JuegoHarryPotter.Atacan.add(hechiAtaque);
+        System.out.println("La salud del pj1 es de "+ pj1.salud);
+        pj2.atacar(pj1, hechiAtaque);
+        System.out.println("La salud del pj1 es de "+ pj1.salud);
+
+  /*
+        if(pj1.estaVivo);
+
+        JuegoHarryPotter.Defen.add(hechiDefensa);
+        pj2.defenderse(pj1, hechiDefensa);
+        if(pj2.estaVivo==false);
+        pj1.salud=100;
+        pj1 = nivelDaño -= nivelVida
+
+        
+/*/
     }
 
 }

@@ -1,7 +1,7 @@
 package app.hechizos;
 
 
-public class HechizoDefensa{
+public class HechizoDefensa extends Hechizo{
 
     
 
