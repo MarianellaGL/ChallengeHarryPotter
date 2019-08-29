@@ -30,15 +30,15 @@ public class App {
 
         
 
-        }
+        
 
         //tenemos que hacer que pj1 y pj 2 peleen y que alguno de los dos gane o pierda, por ahora probemos algo tranqui.
         
         JuegoHarryPotter.Atacan.add(hechiAtaque);
-        System.out.println("La salud del pj1 es de "+ pj1.salud);
+        System.out.println("La salud de "+ pj1.nombre + " es de "+ pj1.salud);
         pj2.atacar(pj1, hechiAtaque);
-        System.out.println("La salud del pj1 es de "+ pj1.salud);
-
+        System.out.println("La salud de " + pj2.nombre + " es de "+ pj2.salud);
+    }
   /*
         if(pj1.estaVivo);
 

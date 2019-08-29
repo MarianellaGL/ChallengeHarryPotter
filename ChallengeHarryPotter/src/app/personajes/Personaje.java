@@ -23,6 +23,8 @@ public class Personaje {
 
     }
 
+
+
     public boolean estaVivo() {
         if (salud > 0)
             return true;
