@@ -1,5 +1,8 @@
 package app;
 
+import app.artefactos.Artefacto;
+import app.artefactos.CapaInvisibilidad;
+import app.artefactos.VaritaSauco;
 import app.hechizos.CaveInimicum;
 import app.hechizos.Hechizo;
 import app.hechizos.SectumSempra;
@@ -25,6 +28,10 @@ public class App {
         hechiDefensa.nivelDaño = 25;
         hechiDefensa.nivelDefensa = 75;
 
+        
+
+        }
+
         //tenemos que hacer que pj1 y pj 2 peleen y que alguno de los dos gane o pierda, por ahora probemos algo tranqui.
         
         JuegoHarryPotter.Atacan.add(hechiAtaque);
@@ -45,7 +52,6 @@ public class App {
 /*/
     }
 
-}
 
 
 

@@ -10,7 +10,8 @@ import app.transportes.Transporte;
 
 public class VaritaSauco extends Varita implements IReliquiaMuerte, IEsMagico, IHacerMagia {
 
-    public boolean EsReliquiaMuerte= true;
+    public static int dañoAdicional;
+	public boolean EsReliquiaMuerte= true;
 
     @Override
     public void atacar(Personaje enemigo, Hechizo hechizo) {

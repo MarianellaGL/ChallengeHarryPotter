@@ -61,14 +61,18 @@ public class JuegoHarryPotter {
         JuegoHarryPotter.PersonajesJugables.add(magoSnape);
 
     }
-    public static Artefacto elegirArtefacto(String nombre){
-        for (Artefacto tefacto : JuegoHarryPotter.ArtefactosMagicos){
-        if (tefacto.nombreArtefacto.equals ("nombre"))
-        
-            return tefacto;
-        }
-        
-        return null;
-        
-        }
+    public static void AgregarArtefacto(){
+        Artefacto CapaInvisibilidad= new Artefacto();
+        CapaInvisibilidad.nombreArtefacto= "Capa de Invisibilidad";
+        CapaInvisibilidad.amplificadorDaño = 20 * 0.25;
+        CapaInvisibilidad.amplificadorSalud = 20*10;
+        JuegoHarryPotter.ArtefactosMagicos.add(CapaInvisibilidad);
+
+        Artefacto VaritaSauco = new Artefacto();
+        VaritaSauco.nombreArtefacto="Varita de Sauco";
+        VaritaSauco.amplificadorDaño= 20*0.25;
+        VaritaSauco.amplificadorSalud=20*10;
+        JuegoHarryPotter.ArtefactosMagicos.add(VaritaSauco);
+    }
+       
 }
