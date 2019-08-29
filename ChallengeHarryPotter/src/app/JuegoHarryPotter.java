@@ -62,7 +62,7 @@ public class JuegoHarryPotter {
 
     }
     public static Artefacto elegirArtefacto(String nombre){
-        for (Artefacto tefacto : Artefacto.Ar){
+        for (Artefacto tefacto : JuegoHarryPotter.ArtefactosMagicos){
         if (tefacto.nombreArtefacto.equals ("nombre"))
         
             return tefacto;
