@@ -6,7 +6,6 @@ import java.util.List;
 import app.artefactos.Artefacto;
 import app.hechizos.Hechizo;
 import app.hechizos.HechizoAtaque;
-import app.interfaces.IHacerMagia;
 import app.personajes.Criatura;
 import app.personajes.Elfo;
 import app.personajes.Mago;
@@ -98,13 +97,6 @@ public class JuegoHarryPotter {
         JuegoHarryPotter.artefactos.add(vSauco);
     
     
-     
-        while(JuegoHarryPotter.PersonajesJugables != 0 ){
-
-
-
-            
-        }
 
 
 

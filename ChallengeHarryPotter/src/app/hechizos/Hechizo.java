@@ -41,4 +41,24 @@ public class Hechizo implements IHacerMagia {
     public void setPoderInicial() {
 
     }
+
+    @Override
+    public void getPoderInicial() {
+
+    }
+
+    @Override
+    public void setPoderInicial(Poder P) {
+
+    }
+
+    @Override
+    public void aprender(Hechizo h) {
+
+    }
+
+    @Override
+    public void atacar(Personaje p, String nombreHechizo) {
+
+    }
 }

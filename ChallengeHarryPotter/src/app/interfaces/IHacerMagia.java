@@ -4,6 +4,7 @@ import java.util.List;
 
 import app.artefactos.Artefacto;
 import app.hechizos.Hechizo;
+import app.hechizos.Poder;
 import app.personajes.Personaje;
 
 /**
@@ -13,14 +14,16 @@ public interface IHacerMagia {
 
     
 
-    int getPoderInicial();
+    void getPoderInicial();
+    
 
-    void setPoderInicial();
+    void setPoderInicial( Poder P);
 
-    void aprender();
+    void aprender(Hechizo h);
 
     List<Artefacto> getArtefactos();
 
     void atacar(Personaje enemigo, Hechizo hechizo);
+    void atacar(Personaje p, String nombreHechizo);
 
 }

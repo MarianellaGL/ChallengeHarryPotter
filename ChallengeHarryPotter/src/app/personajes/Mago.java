@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import app.artefactos.Artefacto;
-import app.hechizos.CaveInimicum;
 import app.hechizos.Hechizo;
 import app.hechizos.Poder;
 import app.interfaces.IHacerMagia;
@@ -21,22 +20,18 @@ public class Mago extends Personaje implements IHacerMagia {
     public boolean esReliquia;
     public int amplificadorDaño;
 
-   
-
     public Poder getPoder() {
-        
-       for (Poder p : losPoderes) {
-           if(p.nombrePoder.equals(nombre) ){
 
+        for (Poder p : losPoderes) {
+            if (p.nombrePoder.equals(nombre)) {
 
-            return p;
-           }
+                return p;
+            }
         }
 
         return null;
-                       
-       }
-      
+
+    }
 
     public void setPoderInicial(int poderInicial) {
         this.poderInicial = poderInicial;
@@ -44,39 +39,36 @@ public class Mago extends Personaje implements IHacerMagia {
 
     @Override
     public void atacar(Personaje enemigo, Hechizo hechizo) {
-    
-            enemigo.salud-=hechizo.nivelDaño;        
-            
-    
-            
+
+        enemigo.salud -= hechizo.nivelDaño;
+
+    }
+
+    @Override
+    public void aprender(Hechizo h) {
+
+    }
+
+    @Override
+    public List<Artefacto> getArtefactos() {
+        return artefactos;
+    }
+
+    @Override
+    public void getPoderInicial() {
         
-            }
-
-
-	@Override
-	public int getPoderInicial() {
-		return 0;
-	}
-
-
-	@Override
-	public void setPoderInicial() {
-		
-	}
-
-
-	@Override
-	public void aprender() {
-		
-	}
-
-
-	@Override
-	public List<Artefacto> getArtefactos() {
-		return artefactos;
-	}
-
-
+    
             //amplificar daño si vale uno devuelve si no te toma es porque hay que casteado 
 
     }
+
+    @Override
+	public void setPoderInicial( Poder p) {
+		
+	}
+
+    @Override
+	public void atacar(Personaje p, String nombreHechizo) {
+        
+    }
+	}

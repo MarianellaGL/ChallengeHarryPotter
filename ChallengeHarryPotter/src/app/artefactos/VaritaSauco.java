@@ -3,6 +3,7 @@ package app.artefactos;
 import java.util.List;
 
 import app.hechizos.Hechizo;
+import app.hechizos.Poder;
 import app.interfaces.IEsMagico;
 import app.interfaces.IHacerMagia;
 import app.interfaces.IReliquiaMuerte;
@@ -14,17 +15,17 @@ public class VaritaSauco extends Varita implements IReliquiaMuerte, IEsMagico, I
     public boolean EsReliquiaMuerte = true;
 
     @Override
-    public int getPoderInicial() {
-        return 0;
-    }
-
-    @Override
-    public void setPoderInicial() {
+    public void getPoderInicial() {
 
     }
 
     @Override
-    public void aprender() {
+    public void setPoderInicial(Poder P) {
+
+    }
+
+    @Override
+    public void aprender(Hechizo h) {
 
     }
 
@@ -36,17 +37,11 @@ public class VaritaSauco extends Varita implements IReliquiaMuerte, IEsMagico, I
     @Override
     public void atacar(Personaje enemigo, Hechizo hechizo) {
 
-        
     }
+
     @Override
-    public boolean esReliquia(VaritaSauco vSauco, PiedraResurreccion pResurreccion, HorrorCrux hCrux,
-            CapaInvisibilidad cInvisibilidad) {
-        return EsReliquiaMuerte;
+    public void atacar(Personaje p, String nombreHechizo) {
 
     }
-
-    
-
-
-
 }
+  

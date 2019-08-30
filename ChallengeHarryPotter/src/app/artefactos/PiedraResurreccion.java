@@ -13,14 +13,5 @@ public class PiedraResurreccion extends Artefacto implements IEsMagico, IReliqui
 		
 	}
 
-    @Override
-    public void esReliquia(VaritaSauco vSauco, PiedraResurreccion pResurreccion, HorrorCrux hCrux,
-            CapaInvisibilidad cInvisibilidad) {
-
-    }
-
-  
-    
-
-    
 }
+  
