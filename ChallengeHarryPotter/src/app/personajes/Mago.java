@@ -6,6 +6,7 @@ import java.util.List;
 import app.artefactos.Artefacto;
 import app.hechizos.Hechizo;
 import app.hechizos.Poder;
+import app.hechizos.SectumSempra;
 import app.interfaces.IHacerMagia;
 import app.transportes.Transporte;
 
@@ -39,12 +40,7 @@ public class Mago extends Personaje implements IHacerMagia {
         this.poderInicial = poderInicial;
     }
 
-    @Override
-    public void atacar(Personaje enemigo, Hechizo hechizo) {
-
-        enemigo.salud -= hechizo.nivelDaño;
-
-    }
+   
 
     @Override
     public void aprender(Hechizo h) {
@@ -69,10 +65,21 @@ public class Mago extends Personaje implements IHacerMagia {
 		
 	}
 
+ 
+
     @Override
-	public void atacar(Personaje p, String nombreHechizo) {
-        
+    public void atacar(Personaje enemigo, Hechizo hechizo, Artefacto artefacto) {
+
     }
+
+
+    @Override
+    public void atacar(Personaje p, String nombreHechizo) {
+
+    }
+
+	public void atacar(Mago pj1, SectumSempra sempra) {
+	}
 	}
 
 

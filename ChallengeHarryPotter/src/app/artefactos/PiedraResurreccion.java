@@ -7,11 +7,16 @@ import app.transportes.Transporte;
 
 public class PiedraResurreccion extends Artefacto implements IEsMagico, IReliquiaMuerte {
 
-
     @Override
     public void esMagico(Transporte utilizado, Artefacto obtenido, Criatura ayudante) {
-		
-	}
+
+    }
+
+    @Override
+    public boolean esReliquia(VaritaSauco vSauco, PiedraResurreccion pResurreccion, HorrorCrux hCrux,
+            CapaInvisibilidad cInvisibilidad) {
+        return super.esReliquia(vSauco, pResurreccion, hCrux, cInvisibilidad);
+    }
 
 }
   

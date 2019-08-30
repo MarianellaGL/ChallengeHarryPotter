@@ -95,12 +95,56 @@ public class JuegoHarryPotter {
         vSauco.amplificadorDaño = 20 * 0.25;
         vSauco.amplificadorSalud = 20 * 10;
         JuegoHarryPotter.artefactos.add(vSauco);
+
+        Artefacto hPuff = new Artefacto();
+        hPuff.nombreArtefacto = "Copa helga Hufflepuff";
+        hPuff.amplificadorDaño=20* 0.10;
+        hPuff.amplificadorSalud=20*0.50;
+        JuegoHarryPotter.artefactos.add(hPuff);
+
+        Artefacto rRevenclaw = new Artefacto();
+        rRevenclaw.nombreArtefacto= "Diadema RowenaRevenclaw";
+        rRevenclaw.amplificadorDaño=20*0.15;
+        rRevenclaw.amplificadorSalud=20*0.10;
+        JuegoHarryPotter.artefactos.add(rRevenclaw);
+
+        Artefacto tRiddle = new Artefacto();
+        tRiddle.nombre="Diario Tom Riddle";
+        tRiddle.amplificadorDaño=20*0.5;
+        tRiddle.amplificadorSalud=20*0.7;
+        JuegoHarryPotter.artefactos.add(tRiddle);
     
-    
+        Artefacto sSlytherin = new Artefacto();
+        sSlytherin.nombre= "Guardapelo Salaar Slytherin";
+        sSlytherin.amplificadorDaño=0.5;
+        sSlytherin.amplificadorSalud=0.3;
+        JuegoHarryPotter.artefactos.add(sSlytherin);
 
+        Artefacto hCrux = new Artefacto();
+        hCrux.nombre="Horror Crux";
+        hCrux.amplificadorDaño=0.25;
+        hCrux.amplificadorSalud=0.15;
+        JuegoHarryPotter.artefactos.add(hCrux);
 
+        Artefacto pFilosofal = new Artefacto();
+        pFilosofal.nombre="Piedra Filosofal";
+        pFilosofal.amplificadorDaño=0.75;
+        pFilosofal.amplificadorSalud=0.15;
+        JuegoHarryPotter.artefactos.add(pFilosofal);
 
+        Artefacto sSeleccionador= new Artefacto();
+        sSeleccionador.nombre="Sombrero Seleccionador";
+        sSeleccionador.amplificadorDaño=0.5;
+        sSeleccionador.amplificadorSalud=0.2;
+        JuegoHarryPotter.artefactos.add(sSeleccionador);
 
+        Artefacto varita= new Artefacto();
+        varita.nombre= "Varita";
+        varita.amplificadorDaño=0.32;
+        varita.amplificadorSalud=0.5;
+        JuegoHarryPotter.artefactos.add(varita);
+
+      
 
       }
     }

@@ -34,13 +34,15 @@ public class VaritaSauco extends Varita implements IReliquiaMuerte, IEsMagico, I
         return null;
     }
 
+   
+
     @Override
-    public void atacar(Personaje enemigo, Hechizo hechizo) {
+    public void atacar(Personaje p, String nombreHechizo) {
 
     }
 
     @Override
-    public void atacar(Personaje p, String nombreHechizo) {
+    public void atacar(Personaje enemigo, Hechizo hechizo, Artefacto artefacto) {
 
     }
 }

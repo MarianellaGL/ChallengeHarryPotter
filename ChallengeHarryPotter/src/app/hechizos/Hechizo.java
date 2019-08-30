@@ -17,10 +17,7 @@ public class Hechizo extends Poder implements IHacerMagia {
     public int nivelDaño;
     public String nombreHechizo;
 
-    @Override
-    public void atacar(Personaje enemigo, Hechizo hechizo) {
-
-    }
+  
 
     @Override
     public List<Artefacto> getArtefactos() {
@@ -46,5 +43,10 @@ public class Hechizo extends Poder implements IHacerMagia {
     @Override
 	public void getPoderInicial() {
 		
+    }
+
+    @Override
+    public void atacar(Personaje enemigo, Hechizo hechizo, Artefacto artefacto) {
+
     }
 }

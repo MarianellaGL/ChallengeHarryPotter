@@ -9,6 +9,7 @@ public class CaveInimicum extends HechizoDefensa implements IHacerMagia{
 
 	public int nivelDefensa;
 	
+	
 
     
 }
