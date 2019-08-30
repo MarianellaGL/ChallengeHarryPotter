@@ -15,7 +15,6 @@ import app.transportes.Transporte;
 
 public class JuegoHarryPotter {
 
-
     public static List<Personaje> PersonajesJugables = new ArrayList<Personaje>();
     public static List<Elfo> losElfos = new ArrayList<Elfo>();
     public static List<Criatura> losBichos = new ArrayList<Criatura>();
@@ -39,8 +38,6 @@ public class JuegoHarryPotter {
 
     }
 
-    
-
     public static void InicializarJuego() {
         AgregarPersonaje();
     }
@@ -56,8 +53,6 @@ public class JuegoHarryPotter {
 
         JuegoHarryPotter.LosMagos.add(magoHarry);
         JuegoHarryPotter.PersonajesJugables.add(magoHarry);
-        
-
 
         Mago magoSnape = new Mago();
         magoSnape.nombre = "Severus Snape";
@@ -73,34 +68,30 @@ public class JuegoHarryPotter {
         elfoDobby.nombreCriatura = "Elfo Dobby";
         elfoDobby.ayudaAlMago = false;
         elfoDobby.estaVivo = true;
-        elfoDobby.magiaInicial= 1000;
-        elfoDobby.salud= 1800;
-        elfoDobby.esDomestico= false;
+        elfoDobby.magiaInicial = 1000;
+        elfoDobby.salud = 1800;
+        elfoDobby.esDomestico = false;
 
-
-       
         JuegoHarryPotter.losBichos.add(elfoDobby);
         JuegoHarryPotter.losElfos.add(elfoDobby);
         JuegoHarryPotter.PersonajesJugables.add(elfoDobby);
 
     }
-    public static void AgregarArtefacto(){
-        Artefacto CapaInvisibilidad= new Artefacto();
-        CapaInvisibilidad.nombreArtefacto= "Capa de Invisibilidad";
-        CapaInvisibilidad.amplificadorDaño = 20 * 0.25;
-        CapaInvisibilidad.amplificadorSalud = 20*10;
-        JuegoHarryPotter.artefactos.add(CapaInvisibilidad);
 
-        Artefacto VaritaSauco = new Artefacto();
-        VaritaSauco.nombreArtefacto="Varita de Sauco";
-        VaritaSauco.amplificadorDaño= 20*0.25;
-        VaritaSauco.amplificadorSalud=20*10;
-        JuegoHarryPotter.artefactos.add(VaritaSauco);
+    public static void AgregarArtefacto() {
+        Artefacto cInvisibilidad= new Artefacto();
+        cInvisibilidad.nombreArtefacto = "Capa de Invisibilidad";
+        cInvisibilidad.amplificadorDaño = 20 * 0.25;
+        cInvisibilidad.amplificadorSalud = 20 * 10;
+        cInvisibilidad.esReliquia = true;
+        JuegoHarryPotter.artefactos.add(cInvisibilidad);
+
+        Artefacto vSauco = new Artefacto();
+        vSauco.nombreArtefacto = "Varita de Sauco";
+        vSauco.amplificadorDaño = 20 * 0.25;
+        vSauco.amplificadorSalud = 20 * 10;
+        vSauco.esReliquia=true;
+        JuegoHarryPotter.artefactos.add(vSauco);
     }
-    
-   
 
 }
-       
-
-

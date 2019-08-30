@@ -11,8 +11,6 @@ public class AnilloMarvoloGaunt extends Artefacto implements IEsMagico {
 		
 	}
 
-    public AnilloMarvoloGaunt() {
-    }
 
     
 }
