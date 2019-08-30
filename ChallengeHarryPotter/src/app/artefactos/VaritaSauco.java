@@ -46,10 +46,7 @@ public class VaritaSauco extends Varita implements IReliquiaMuerte, IEsMagico, I
     }
 
     
-    @Override
-    public boolean esReliquia() {
-        return true;
-    }
+
 
 
 }

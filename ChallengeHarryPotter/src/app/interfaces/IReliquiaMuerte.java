@@ -11,7 +11,7 @@ import app.artefactos.VaritaSauco;
 public interface IReliquiaMuerte {
 
     void esReliquia(VaritaSauco vSauco, PiedraResurreccion pResurreccion, HorrorCrux hCrux, CapaInvisibilidad cInvisibilidad);
-    boolean esReliquia();
+    boolean esReliquia = true;
 
     
     
