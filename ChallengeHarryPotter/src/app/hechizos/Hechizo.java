@@ -9,7 +9,7 @@ import app.personajes.Personaje;
 /**
  * Hechizo
  */
-public class Hechizo implements IHacerMagia {
+public class Hechizo extends Poder implements IHacerMagia {
 
     public boolean esOscuro = false;
     public int nivelCuracion;
@@ -23,29 +23,10 @@ public class Hechizo implements IHacerMagia {
     }
 
     @Override
-    public void aprender() {
-
-    }
-
-    @Override
     public List<Artefacto> getArtefactos() {
         return null;
     }
 
-    @Override
-    public int getPoderInicial() {
-        return 0;
-    }
-
-    @Override
-    public void setPoderInicial() {
-
-    }
-
-    @Override
-    public void getPoderInicial() {
-
-    }
 
     @Override
     public void setPoderInicial(Poder P) {
@@ -60,5 +41,10 @@ public class Hechizo implements IHacerMagia {
     @Override
     public void atacar(Personaje p, String nombreHechizo) {
 
+}
+
+    @Override
+	public void getPoderInicial() {
+		
     }
 }
