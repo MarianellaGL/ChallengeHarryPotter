@@ -1,6 +1,8 @@
 package app.transportes;
 
-public class AutobusNoctambulo extends Transporte{
+import app.interfaces.IEsMagico;
+
+public class AutobusNoctambulo extends Transporte implements IEsMagico{
 
     
 }

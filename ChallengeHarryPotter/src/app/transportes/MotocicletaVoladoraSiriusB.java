@@ -1,6 +1,8 @@
 package app.transportes;
 
-public class MotocicletaVoladoraSiriusB extends Transporte{
+import app.interfaces.IEsMagico;
+
+public class MotocicletaVoladoraSiriusB extends Transporte implements IEsMagico{
 
     
 }

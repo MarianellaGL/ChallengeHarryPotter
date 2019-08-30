@@ -1,6 +1,8 @@
 package app.transportes;
 
-public class ArmarioEvanescente extends Transporte{
+import app.interfaces.IEsMagico;
+
+public class ArmarioEvanescente extends Transporte implements IEsMagico{
 
     
 }

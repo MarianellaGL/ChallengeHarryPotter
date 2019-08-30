@@ -1,6 +1,8 @@
 package app.transportes;
 
-public class AlfombraVoladora extends Transporte{
+import app.interfaces.IEsMagico;
+
+public class AlfombraVoladora extends Transporte implements IEsMagico{
 
     
 }

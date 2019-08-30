@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import app.artefactos.Artefacto;
-import app.artefactos.CapaInvisibilidad;
 import app.artefactos.VaritaSauco;
 import app.hechizos.CaveInimicum;
 import app.hechizos.Hechizo;
@@ -26,8 +25,6 @@ public class Mago extends Personaje implements IHacerMagia {
 
     @Override
     public void atacar(Personaje enemigo, Hechizo hechizo) {
-        double dañoAdicional=0;
-        double curacionAdicional=0;
 
         enemigo.salud-=hechizo.nivelDaño+VaritaSauco.dañoAdicional;
         if(hechizo.esOscuro)
@@ -71,9 +68,6 @@ public class Mago extends Personaje implements IHacerMagia {
         this.hechizos = hechizos;
     }
 
-    public List<Artefacto> getArtefactos() {
-        return artefactos;
-    }
 
     public void setArtefactos(List<Artefacto> artefactos) {
         this.artefactos = artefactos;
@@ -88,5 +82,23 @@ public void versus(){
 
 
 public void defenderse(Mago pj1, CaveInimicum hechiDefensa) {
-}}
+}
+
+    @Override
+    public void setPoderInicial() {
+
+    }
+
+    @Override
+    public void aprender() {
+
+    }
+
+    @Override
+    public List<Artefacto> getArtefactos() {
+
+        return this.artefactos;
+
+    }
+}
 

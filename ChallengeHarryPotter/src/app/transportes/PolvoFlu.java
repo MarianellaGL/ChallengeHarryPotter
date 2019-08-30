@@ -1,6 +1,8 @@
 package app.transportes;
 
-public class PolvoFlu extends Transporte{
+import app.interfaces.IEsMagico;
+
+public class PolvoFlu extends Transporte implements IEsMagico{
 
     
 }

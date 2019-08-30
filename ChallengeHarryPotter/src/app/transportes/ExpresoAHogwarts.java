@@ -1,6 +1,8 @@
 package app.transportes;
 
-public class ExpresoAHogwarts extends Transporte{
+import app.interfaces.IEsMagico;
+
+public class ExpresoAHogwarts extends Transporte implements IEsMagico{
 
     
 }

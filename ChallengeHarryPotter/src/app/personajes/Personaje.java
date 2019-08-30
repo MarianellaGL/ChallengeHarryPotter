@@ -10,6 +10,8 @@ public class Personaje {
 
     public List<Mago> LosMagos = new ArrayList<Mago>();
     public static List<Muggle> LosComunes = new ArrayList<Muggle>();
+    public static List<Elfo> losElfos = new ArrayList<Elfo>();
+    public static List<Criatura> losBichos = new ArrayList<Criatura>();
 
     public Mago getMago(String nombre) {
 

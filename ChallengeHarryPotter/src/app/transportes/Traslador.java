@@ -1,6 +1,8 @@
 package app.transportes;
 
-public class Traslador extends Transporte{
+import app.interfaces.IEsMagico;
+
+public class Traslador extends Transporte implements IEsMagico{
 
     
 }

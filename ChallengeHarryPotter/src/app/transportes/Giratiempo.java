@@ -1,6 +1,8 @@
 package app.transportes;
 
-public class Giratiempo extends Transporte{
+import app.interfaces.IEsMagico;
+
+public class Giratiempo extends Transporte implements IEsMagico{
 
     
 }
