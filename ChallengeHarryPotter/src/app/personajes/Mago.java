@@ -72,3 +72,6 @@ public class Mago extends Personaje implements IHacerMagia {
         
     }
 	}
+
+
+    

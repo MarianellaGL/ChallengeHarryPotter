@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import app.hechizos.CaveInimicum;
 import app.hechizos.SectumSempra;
+import app.interfaces.IHacerMagia;
 import app.personajes.Mago;
 
 public class App {
@@ -39,14 +40,35 @@ public class App {
         System.out.println("La salud de " + pj1.nombre + " es de " + pj1.salud);
         pj2.atacar(pj1, hechiAtaque);
         System.out.println("La salud de " + pj2.nombre + " es de " + pj2.salud);
-    }
-    /*
-     * if(pj1.estaVivo);
-     * 
-     * JuegoHarryPotter.Defen.add(hechiDefensa); pj2.defenderse(pj1, hechiDefensa);
-     * if(pj2.estaVivo==false); pj1.salud=100; pj1 = nivelDaño -= nivelVida
-     * 
-     * 
-     * /
-     */
+    
+        boolean atacapj1 = true;
+
+    while (pj1.salud > 0 && pj2.salud >0){
+
+
+        if(atacapj1){
+
+            if(pj1 instanceof IHacerMagia){
+
+                IHacerMagia mago1 = (IHacerMagia)pj1;
+                mago1.atacar(pj2, hechiAtaque);
+            }
+
+        atacapj1 = false;
+        }else if (pj2 instanceof IHacerMagia){
+
+            IHacerMagia mago2 = (IHacerMagia)pj2;
+            mago2.atacar(pj2, hechiAtaque);
+        }
+
+
+        }
+        System.out.println("La salud de " + pj1.nombre + " es de " + pj1.salud);
+        pj2.atacar(pj1, hechiAtaque);
+        System.out.println("La salud de " + pj2.nombre + " es de " + pj2.salud);
+    
+    }      
+
+
+
 }
