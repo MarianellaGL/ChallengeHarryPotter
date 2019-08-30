@@ -5,6 +5,7 @@ import java.util.Scanner;
 import app.hechizos.AvadaKedabra;
 import app.hechizos.CaveInimicum;
 import app.hechizos.Expelliarmus;
+import app.hechizos.Hechizo;
 import app.hechizos.MaleficioCruciatus;
 import app.hechizos.SectumSempra;
 import app.interfaces.IHacerMagia;
@@ -47,20 +48,20 @@ public class App {
         }
         {
 
-            SectumSempra hechiAtaque = new SectumSempra();
-            hechiAtaque.nombreHechizo = "Sectum Sempra";
-            hechiAtaque.esOscuro = true;
-            hechiAtaque.nivelDaño = 100;
+            SectumSempra sempra = new SectumSempra();
+            sempra.nombreHechizo = "Sectum Sempra";
+            sempra.esOscuro = true;
+            sempra.nivelDaño = 100;
 
-            JuegoHarryPotter.hechizos.add(hechiAtaque);
+            JuegoHarryPotter.hechizos.add(sempra);
 
-            CaveInimicum hechiDefensa = new CaveInimicum();
-            hechiDefensa.nombreHechizo = " Cave Inimicum";
-            hechiDefensa.esOscuro = false;
-            hechiDefensa.nivelDaño = 0;
-            hechiDefensa.nivelDefensa = 75;
+            CaveInimicum inimicum = new CaveInimicum();
+            inimicum.nombreHechizo = " Cave Inimicum";
+            inimicum.esOscuro = false;
+            inimicum.nivelDaño = 0;
+            inimicum.nivelDefensa = 75;
 
-            JuegoHarryPotter.hechizos.add(hechiDefensa);
+            JuegoHarryPotter.hechizos.add(inimicum);
 
             AvadaKedabra kedabra = new AvadaKedabra();
             kedabra.nombreHechizo = "Avada Kedabra";
@@ -82,12 +83,11 @@ public class App {
             expelliarmus.nivelDaño = 50;
 
             JuegoHarryPotter.hechizos.add(expelliarmus);
-        
 
             // tenemos que hacer que pj1 y pj 2 peleen y que alguno de los dos gane o
             // pierda, por ahora probemos algo tranqui.
             System.out.println("La salud de " + pj1.nombre + " es de " + pj1.salud);
-            pj2.atacar(pj1, hechiAtaque);
+            pj2.atacar(pj1, sempra);
             System.out.println("La salud de " + pj2.nombre + " es de " + pj2.salud);
 
             boolean atacapj1 = true;
@@ -96,22 +96,27 @@ public class App {
 
             while (pj1.salud > 0 && pj2.salud > 0) {
                 System.out.println("Elegi el hechizo a utilizar 1 = Sectum Sempra, 2 = Avada Kedabra, 3= Expelliarmus");
-                 tipoHechizo = Teclado.nextInt();
-                 switch (tipoHechizo) {
-                     case 1:
-                         hechizoAtacante = hechiAtaque;
-                         break;
-                 
-                     case 2:
-                         hechizoAtacante = kedabra;
-                         break;
-
-                    case 3:
-                    hechizoAtacante= expelliarmus;
+                tipoHechizo = Teclado.nextInt();
+                switch (tipoHechizo) {
+                case 1:
+                    hechizoAtacante = sempra;
                     break;
-                 }
-                
-                
+
+                case 2:
+                    hechizoAtacante = kedabra;
+                    break;
+
+                case 3:
+                    hechizoAtacante = expelliarmus;
+                    break;
+                case 4:
+                    hechizoAtacante = inimicum;
+                    break;
+                case 5:
+                    hechizoAtacante = cruciatus;
+                    break;
+                }
+
                 if (atacapj1) {
 
                     if (pj1 instanceof IHacerMagia) {
@@ -124,18 +129,17 @@ public class App {
                 } else if (pj2 instanceof IHacerMagia) {
 
                     IHacerMagia mago2 = (IHacerMagia) pj2;
-                    mago2.atacar(pj1, hechizoAtacante );
+                    mago2.atacar(pj1, hechizoAtacante);
                 }
 
             }
             System.out.println("La salud de " + pj1.nombre + " es de " + pj1.salud);
-            pj2.atacar(pj1, hechiAtaque);
+            pj2.atacar(pj1, sempra);
             System.out.println("La salud de " + pj2.nombre + " es de " + pj2.salud);
 
         }
 
     }
-
 
     //
 }
