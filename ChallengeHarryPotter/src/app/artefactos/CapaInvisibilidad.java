@@ -15,8 +15,10 @@ public class CapaInvisibilidad extends Artefacto implements IEsMagico, IReliquia
 	}
 
     @Override
-    public void esReliquia(VaritaSauco vSauco, PiedraResurreccion pResurreccion, HorrorCrux hCrux,
+    public boolean esReliquia(VaritaSauco vSauco, PiedraResurreccion pResurreccion, HorrorCrux hCrux,
             CapaInvisibilidad cInvisibilidad) {
+        return true;
+
 
     }
 

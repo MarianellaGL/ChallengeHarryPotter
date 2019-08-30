@@ -32,5 +32,7 @@ public class Personaje {
             return true;
 
         return false;
-    }
+    
+
+        }
 }

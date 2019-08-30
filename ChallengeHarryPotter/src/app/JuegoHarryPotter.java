@@ -6,6 +6,7 @@ import java.util.List;
 import app.artefactos.Artefacto;
 import app.hechizos.Hechizo;
 import app.hechizos.HechizoAtaque;
+import app.interfaces.IHacerMagia;
 import app.personajes.Criatura;
 import app.personajes.Elfo;
 import app.personajes.Mago;
@@ -41,12 +42,16 @@ public class JuegoHarryPotter {
     public static void InicializarJuego() {
         AgregarPersonaje();
     }
+//ihacer magia y lo buscas cuando tenes los dos objetos personajes lo haces atacar
+//el objeto personaje no tiene metodo atacar
+//while o for van en Juegoharrypotter
 
     public static void AgregarPersonaje() {
 
         Mago magoHarry = new Mago();
         magoHarry.nombre = "Harry Potter";
         magoHarry.estaVivo = true;
+        magoHarry.esMagoOscuro = false;
         magoHarry.energiaMagica = 40 + 80;
         magoHarry.poderInicial = 80 + 200;
         magoHarry.salud = 100 + 300;
@@ -57,6 +62,7 @@ public class JuegoHarryPotter {
         Mago magoSnape = new Mago();
         magoSnape.nombre = "Severus Snape";
         magoSnape.estaVivo = true;
+        magoSnape.esMagoOscuro = false;
         magoSnape.energiaMagica = 40 + 150;
         magoSnape.poderInicial = 80 + 300;
         magoSnape.salud = 100 + 500;
@@ -83,15 +89,27 @@ public class JuegoHarryPotter {
         cInvisibilidad.nombreArtefacto = "Capa de Invisibilidad";
         cInvisibilidad.amplificadorDaño = 20 * 0.25;
         cInvisibilidad.amplificadorSalud = 20 * 10;
-        cInvisibilidad.esReliquia = true;
         JuegoHarryPotter.artefactos.add(cInvisibilidad);
 
         Artefacto vSauco = new Artefacto();
         vSauco.nombreArtefacto = "Varita de Sauco";
         vSauco.amplificadorDaño = 20 * 0.25;
         vSauco.amplificadorSalud = 20 * 10;
-        vSauco.esReliquia=true;
         JuegoHarryPotter.artefactos.add(vSauco);
-    }
+    
+    
+     
+        while(JuegoHarryPotter.PersonajesJugables != 0 ){
+
+
+
+            
+        }
+
+
+
+
+
+      }
 
 }

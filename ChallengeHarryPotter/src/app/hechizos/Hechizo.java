@@ -15,6 +15,7 @@ public class Hechizo implements IHacerMagia {
     public int nivelCuracion;
     public int nivelEnergia;
     public int nivelDaño;
+    public String nombreHechizo;
 
     @Override
     public void atacar(Personaje enemigo, Hechizo hechizo) {

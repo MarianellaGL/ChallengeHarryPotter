@@ -6,7 +6,6 @@ import app.hechizos.Hechizo;
 import app.interfaces.IEsMagico;
 import app.interfaces.IHacerMagia;
 import app.interfaces.IReliquiaMuerte;
-import app.personajes.Mago;
 import app.personajes.Personaje;
 
 public class VaritaSauco extends Varita implements IReliquiaMuerte, IEsMagico, IHacerMagia {
@@ -40,8 +39,9 @@ public class VaritaSauco extends Varita implements IReliquiaMuerte, IEsMagico, I
         
     }
     @Override
-    public void esReliquia(VaritaSauco vSauco, PiedraResurreccion pResurreccion, HorrorCrux hCrux,
+    public boolean esReliquia(VaritaSauco vSauco, PiedraResurreccion pResurreccion, HorrorCrux hCrux,
             CapaInvisibilidad cInvisibilidad) {
+        return EsReliquiaMuerte;
 
     }
 
