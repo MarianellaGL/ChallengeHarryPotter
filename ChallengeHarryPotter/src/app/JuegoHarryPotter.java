@@ -5,6 +5,7 @@ import java.util.List;
 
 import app.artefactos.Artefacto;
 import app.hechizos.HechizoAtaque;
+import app.interfaces.IHacerMagia;
 import app.personajes.Mago;
 import app.personajes.Muggle;
 import app.personajes.Personaje;
@@ -37,7 +38,7 @@ public class JuegoHarryPotter {
         AgregarPersonaje();
     }
 
-    public static void AgregarPersonaje() {
+    public static <Elfo> void AgregarPersonaje() {
 
         Mago magoHarry = new Mago();
         magoHarry.nombre = "Harry Potter";
@@ -48,6 +49,7 @@ public class JuegoHarryPotter {
 
         JuegoHarryPotter.LosMagos.add(magoHarry);
         JuegoHarryPotter.PersonajesJugables.add(magoHarry);
+        
 
 
         Mago magoSnape = new Mago();
@@ -56,6 +58,12 @@ public class JuegoHarryPotter {
         magoSnape.energiaMagica = 40 + 150;
         magoSnape.poderInicial = 80 + 300;
         magoSnape.salud = 100 + 500;
+
+        Criatura elfoDobby = new Criatura();
+
+        Elfo elfoDobby = new Elfo();
+        elfoDobby. = "Elfo Dobby";
+
 
         JuegoHarryPotter.LosMagos.add(magoSnape);
         JuegoHarryPotter.PersonajesJugables.add(magoSnape);
@@ -74,5 +82,7 @@ public class JuegoHarryPotter {
         VaritaSauco.amplificadorSalud=20*10;
         JuegoHarryPotter.ArtefactosMagicos.add(VaritaSauco);
     }
-       
 }
+       
+
+

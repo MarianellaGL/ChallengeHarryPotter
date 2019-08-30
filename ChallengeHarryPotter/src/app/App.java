@@ -1,5 +1,7 @@
 package app;
 
+import java.util.Scanner;
+
 import app.artefactos.Artefacto;
 import app.artefactos.CapaInvisibilidad;
 import app.artefactos.VaritaSauco;
@@ -9,6 +11,8 @@ import app.hechizos.SectumSempra;
 import app.personajes.Mago;
 
 public class App {
+
+    public static Scanner Teclado = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
 
         System.out.println("Inicializando juego");

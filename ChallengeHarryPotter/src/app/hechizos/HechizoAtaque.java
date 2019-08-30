@@ -1,6 +1,8 @@
 package app.hechizos;
 
-public class HechizoAtaque extends Hechizo{
+import app.interfaces.IHacerMagia;
+
+public class HechizoAtaque extends Hechizo implements IHacerMagia{
 
 
 

@@ -1,6 +1,14 @@
 package app.hechizos;
 
-public class HechizoCuracion{
+import app.interfaces.IHacerMagia;
+import app.personajes.Personaje;
+
+public class HechizoCuracion implements IHacerMagia {
+
+    @Override
+    public void atacar(Personaje enemigo, Hechizo hechizo) {
+
+	}
 
 
     
