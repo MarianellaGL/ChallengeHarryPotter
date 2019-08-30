@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import app.hechizos.AvadaKedabra;
 import app.hechizos.CaveInimicum;
+import app.hechizos.Expelliarmus;
 import app.hechizos.MaleficioCruciatus;
 import app.hechizos.SectumSempra;
 import app.interfaces.IHacerMagia;
@@ -16,7 +17,7 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         System.out.println("Inicializando juego");
-
+        System.out.println("PRESIONE ENTER");
         JuegoHarryPotter.InicializarJuego();
 
         Teclado.nextLine();
@@ -40,14 +41,11 @@ public class App {
 
         case 3:
 
-            break;
-
-        default:
             System.out.println("No hay más personajes");
             break;
 
-
-        }{
+        }
+        {
 
             SectumSempra hechiAtaque = new SectumSempra();
             hechiAtaque.nombreHechizo = "Sectum Sempra";
@@ -76,6 +74,11 @@ public class App {
             cruciatus.esOscuro = true;
             cruciatus.nivelDaño = 300;
 
+            Expelliarmus expelliarmus = new Expelliarmus();
+            expelliarmus.nombreHechizo = "Expelliarmus";
+            expelliarmus.esOscuro = false;
+            expelliarmus.nivelDaño = 50;
+
             // tenemos que hacer que pj1 y pj 2 peleen y que alguno de los dos gane o
             // pierda, por ahora probemos algo tranqui.
             System.out.println("La salud de " + pj1.nombre + " es de " + pj1.salud);
@@ -85,6 +88,27 @@ public class App {
             boolean atacapj1 = true;
 
             while (pj1.salud > 0 && pj2.salud > 0) {
+                System.out.println("Elegi el hechizo a utilizar");
+                switch (opcion) {
+                case 1:
+
+                    System.out.println(pj1.nombre + "usa " + hechiAtaque.nombreHechizo);
+
+                    break;
+
+                case 2:
+
+                    System.out.println(pj1.nombre + "usa " + kedabra.nombreHechizo);
+                    break;
+                case 3:
+                    System.out.println(pj1.nombre + "usa " + cruciatus.nombreHechizo);
+
+                    break;
+
+                case 4:
+                    System.out.println(pj1.nombre + "usa " + expelliarmus.nombreHechizo);
+                    break;
+                }
 
                 if (atacapj1) {
 
