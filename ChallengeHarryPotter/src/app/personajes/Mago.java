@@ -7,6 +7,7 @@ import app.artefactos.Artefacto;
 import app.hechizos.Hechizo;
 import app.hechizos.Poder;
 import app.interfaces.IHacerMagia;
+import app.transportes.Transporte;
 
 public class Mago extends Personaje implements IHacerMagia {
     public int poderInicial = 80;
@@ -17,6 +18,7 @@ public class Mago extends Personaje implements IHacerMagia {
     public List<Hechizo> hechizos = new ArrayList<Hechizo>();
     public List<Poder> losPoderes = new ArrayList<Poder>();
     public List<Artefacto> artefactos = new ArrayList<Artefacto>();
+    public List<Transporte> gonnaRide = new ArrayList<Transporte>();
     public boolean esReliquia;
     public int amplificadorDaño;
 

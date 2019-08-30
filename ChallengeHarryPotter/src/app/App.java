@@ -74,10 +74,15 @@ public class App {
             cruciatus.esOscuro = true;
             cruciatus.nivelDaño = 300;
 
+            JuegoHarryPotter.hechizos.add(cruciatus);
+
             Expelliarmus expelliarmus = new Expelliarmus();
             expelliarmus.nombreHechizo = "Expelliarmus";
             expelliarmus.esOscuro = false;
             expelliarmus.nivelDaño = 50;
+
+            JuegoHarryPotter.hechizos.add(expelliarmus);
+        
 
             // tenemos que hacer que pj1 y pj 2 peleen y que alguno de los dos gane o
             // pierda, por ahora probemos algo tranqui.
@@ -86,43 +91,40 @@ public class App {
             System.out.println("La salud de " + pj2.nombre + " es de " + pj2.salud);
 
             boolean atacapj1 = true;
+            int tipoHechizo = 0;
+            Hechizo hechizoAtacante = null;
 
             while (pj1.salud > 0 && pj2.salud > 0) {
-                System.out.println("Elegi el hechizo a utilizar");
-                switch (opcion) {
-                case 1:
+                System.out.println("Elegi el hechizo a utilizar 1 = Sectum Sempra, 2 = Avada Kedabra, 3= Expelliarmus");
+                 tipoHechizo = Teclado.nextInt();
+                 switch (tipoHechizo) {
+                     case 1:
+                         hechizoAtacante = hechiAtaque;
+                         break;
+                 
+                     case 2:
+                         hechizoAtacante = kedabra;
+                         break;
 
-                    System.out.println(pj1.nombre + "usa " + hechiAtaque.nombreHechizo);
-
+                    case 3:
+                    hechizoAtacante= expelliarmus;
                     break;
-
-                case 2:
-
-                    System.out.println(pj1.nombre + "usa " + kedabra.nombreHechizo);
-                    break;
-                case 3:
-                    System.out.println(pj1.nombre + "usa " + cruciatus.nombreHechizo);
-
-                    break;
-
-                case 4:
-                    System.out.println(pj1.nombre + "usa " + expelliarmus.nombreHechizo);
-                    break;
-                }
-
+                 }
+                
+                
                 if (atacapj1) {
 
                     if (pj1 instanceof IHacerMagia) {
 
                         IHacerMagia mago1 = (IHacerMagia) pj1;
-                        mago1.atacar(pj2, hechiAtaque);
+                        mago1.atacar(pj2, hechizoAtacante);
                     }
 
                     atacapj1 = false;
                 } else if (pj2 instanceof IHacerMagia) {
 
                     IHacerMagia mago2 = (IHacerMagia) pj2;
-                    mago2.atacar(pj2, hechiAtaque);
+                    mago2.atacar(pj1, hechizoAtacante );
                 }
 
             }
@@ -133,4 +135,7 @@ public class App {
         }
 
     }
+
+
+    //
 }
