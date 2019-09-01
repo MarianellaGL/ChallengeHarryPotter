@@ -16,6 +16,7 @@ public class Hechizo extends Poder implements IHacerMagia {
     public int nivelEnergia;
     public int nivelDaño;
     public String nombreHechizo;
+	public int nivelDefensa;
 
   
 
@@ -48,5 +49,10 @@ public class Hechizo extends Poder implements IHacerMagia {
     @Override
     public void atacar(Personaje enemigo, Hechizo hechizo, Artefacto artefacto) {
 
+    }
+
+    @Override
+    public List<Hechizo> getHechizos() {
+        return null;
     }
 }

@@ -6,7 +6,6 @@ import java.util.List;
 import app.artefactos.Artefacto;
 import app.hechizos.Hechizo;
 import app.hechizos.Poder;
-import app.hechizos.SectumSempra;
 import app.interfaces.IHacerMagia;
 import app.transportes.Transporte;
 
@@ -44,9 +43,11 @@ public class Mago extends Personaje implements IHacerMagia {
 
     @Override
     public void aprender(Hechizo h) {
-
     }
+public List<Hechizo> getHechizos(){
 
+    return hechizos;
+}
     @Override
     public List<Artefacto> getArtefactos() {
         return artefactos;
@@ -78,8 +79,7 @@ public class Mago extends Personaje implements IHacerMagia {
 
     }
 
-	public void atacar(Mago pj1, SectumSempra sempra) {
-	}
+	
 	}
 
 

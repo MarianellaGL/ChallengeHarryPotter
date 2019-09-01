@@ -10,7 +10,6 @@ public class Artefacto implements IEsMagico, IReliquiaMuerte{
     public double amplificadorDaño = 200;
     public double amplificadorSalud = 200;
     public String nombreArtefacto;
-    public String nombre;
 
     @Override
     public void esMagico(Transporte utilizado, Artefacto obtenido, Criatura ayudante) {
@@ -23,6 +22,6 @@ public class Artefacto implements IEsMagico, IReliquiaMuerte{
     @Override
 	public boolean esReliquia(VaritaSauco vSauco, PiedraResurreccion pResurreccion, HorrorCrux hCrux,
 			CapaInvisibilidad cInvisibilidad) {
-		return false;
+		return true;
     
             }}

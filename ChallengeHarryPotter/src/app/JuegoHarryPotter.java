@@ -2,7 +2,6 @@ package app;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import app.artefactos.Artefacto;
 import app.hechizos.Hechizo;
 import app.hechizos.HechizoAtaque;
@@ -38,12 +37,41 @@ public class JuegoHarryPotter {
 
     }
 
+    public static Artefacto ElegirArtefacto(String nombreArtefacto) {
+
+        for (Artefacto ar : JuegoHarryPotter.artefactos) {
+
+            if (ar.nombreArtefacto.equals(nombreArtefacto))
+
+                return ar;
+
+        }
+        return null;
+
+    }
+
+    public static Hechizo ElegirHechizo(String nombreHechizo) {
+        for (Hechizo h: JuegoHarryPotter.hechizos) {
+
+            if (h.nombreHechizo.equals(nombreHechizo))
+
+                return h;
+
+        }
+        return null;
+
+    }
+
+
     public static void InicializarJuego() {
         AgregarPersonaje();
+        AgregarArtefacto();
+        ElegirHechizo();
     }
-//ihacer magia y lo buscas cuando tenes los dos objetos personajes lo haces atacar
-//el objeto personaje no tiene metodo atacar
-//while o for van en Juegoharrypotter
+    // ihacer magia y lo buscas cuando tenes los dos objetos personajes lo haces
+    // atacar
+    // el objeto personaje no tiene metodo atacar
+    // while o for van en Juegoharrypotter
 
     public static void AgregarPersonaje() {
 
@@ -84,7 +112,7 @@ public class JuegoHarryPotter {
     }
 
     public static void AgregarArtefacto() {
-        Artefacto cInvisibilidad= new Artefacto();
+        Artefacto cInvisibilidad = new Artefacto();
         cInvisibilidad.nombreArtefacto = "Capa de Invisibilidad";
         cInvisibilidad.amplificadorDaño = 20 * 0.25;
         cInvisibilidad.amplificadorSalud = 20 * 10;
@@ -98,56 +126,95 @@ public class JuegoHarryPotter {
 
         Artefacto hPuff = new Artefacto();
         hPuff.nombreArtefacto = "Copa helga Hufflepuff";
-        hPuff.amplificadorDaño=20* 0.10;
-        hPuff.amplificadorSalud=20*0.50;
+        hPuff.amplificadorDaño = 20 * 0.10;
+        hPuff.amplificadorSalud = 20 * 0.50;
         JuegoHarryPotter.artefactos.add(hPuff);
 
         Artefacto rRevenclaw = new Artefacto();
-        rRevenclaw.nombreArtefacto= "Diadema RowenaRevenclaw";
-        rRevenclaw.amplificadorDaño=20*0.15;
-        rRevenclaw.amplificadorSalud=20*0.10;
+        rRevenclaw.nombreArtefacto = "Diadema RowenaRevenclaw";
+        rRevenclaw.amplificadorDaño = 20 * 0.15;
+        rRevenclaw.amplificadorSalud = 20 * 0.10;
         JuegoHarryPotter.artefactos.add(rRevenclaw);
 
         Artefacto tRiddle = new Artefacto();
-        tRiddle.nombre="Diario Tom Riddle";
-        tRiddle.amplificadorDaño=20*0.5;
-        tRiddle.amplificadorSalud=20*0.7;
+        tRiddle.nombreArtefacto = "Diario Tom Riddle";
+        tRiddle.amplificadorDaño = 20 * 0.5;
+        tRiddle.amplificadorSalud = 20 * 0.7;
         JuegoHarryPotter.artefactos.add(tRiddle);
-    
+
         Artefacto sSlytherin = new Artefacto();
-        sSlytherin.nombre= "Guardapelo Salaar Slytherin";
-        sSlytherin.amplificadorDaño=0.5;
-        sSlytherin.amplificadorSalud=0.3;
+        sSlytherin.nombreArtefacto = "Guardapelo Salaar Slytherin";
+        sSlytherin.amplificadorDaño = 0.5;
+        sSlytherin.amplificadorSalud = 0.3;
         JuegoHarryPotter.artefactos.add(sSlytherin);
 
         Artefacto hCrux = new Artefacto();
-        hCrux.nombre="Horror Crux";
-        hCrux.amplificadorDaño=0.25;
-        hCrux.amplificadorSalud=0.15;
+        hCrux.nombreArtefacto = "Horror Crux";
+        hCrux.amplificadorDaño = 0.25;
+        hCrux.amplificadorSalud = 0.15;
         JuegoHarryPotter.artefactos.add(hCrux);
 
         Artefacto pFilosofal = new Artefacto();
-        pFilosofal.nombre="Piedra Filosofal";
-        pFilosofal.amplificadorDaño=0.75;
-        pFilosofal.amplificadorSalud=0.15;
+        pFilosofal.nombreArtefacto = "Piedra Filosofal";
+        pFilosofal.amplificadorDaño = 0.75;
+        pFilosofal.amplificadorSalud = 0.15;
         JuegoHarryPotter.artefactos.add(pFilosofal);
 
-        Artefacto sSeleccionador= new Artefacto();
-        sSeleccionador.nombre="Sombrero Seleccionador";
-        sSeleccionador.amplificadorDaño=0.5;
-        sSeleccionador.amplificadorSalud=0.2;
+        Artefacto sSeleccionador = new Artefacto();
+        sSeleccionador.nombreArtefacto = "Sombrero Seleccionador";
+        sSeleccionador.amplificadorDaño = 0.5;
+        sSeleccionador.amplificadorSalud = 0.2;
         JuegoHarryPotter.artefactos.add(sSeleccionador);
 
-        Artefacto varita= new Artefacto();
-        varita.nombre= "Varita";
-        varita.amplificadorDaño=0.32;
-        varita.amplificadorSalud=0.5;
+        Artefacto varita = new Artefacto();
+        varita.nombreArtefacto = "Varita";
+        varita.amplificadorDaño = 0.32;
+        varita.amplificadorSalud = 0.5;
         JuegoHarryPotter.artefactos.add(varita);
-
-      
-
-      }
     }
 
+    public static void ElegirHechizo() {
+        {
 
-    
+            Hechizo sempra = new Hechizo();
+            sempra.nombreHechizo = "Sectum Sempra";
+            sempra.esOscuro = true;
+            sempra.nivelDaño = 100;
+
+            JuegoHarryPotter.hechizos.add(sempra);
+
+            Hechizo inimicum = new Hechizo();
+            inimicum.nombreHechizo = " Cave Inimicum";
+            inimicum.esOscuro = false;
+            inimicum.nivelDaño = 0;
+            inimicum.nivelDefensa = 75;
+
+            JuegoHarryPotter.hechizos.add(inimicum);
+
+            Hechizo kedabra = new Hechizo();
+            kedabra.nombreHechizo = "Avada Kedabra";
+            kedabra.esOscuro = true;
+            kedabra.nivelDaño = 100000;
+
+            JuegoHarryPotter.hechizos.add(kedabra);
+
+            Hechizo cruciatus = new Hechizo();
+            cruciatus.nombreHechizo = "Maleficio Cruciatus";
+            cruciatus.esOscuro = true;
+            cruciatus.nivelDaño = 300;
+
+            JuegoHarryPotter.hechizos.add(cruciatus);
+            
+            Hechizo expelliarmus = new Hechizo();
+            expelliarmus.nombreHechizo = "Expelliarmus";
+            expelliarmus.esOscuro = false;
+            expelliarmus.nivelDaño = 50;
+
+            JuegoHarryPotter.hechizos.add(expelliarmus);
+
+        }
+
+    }
+
+   
+}
