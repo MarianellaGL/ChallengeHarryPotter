@@ -25,7 +25,6 @@ public interface IHacerMagia {
 
     List<Artefacto> getArtefactos();
 
-    void atacar(Personaje enemigo, Hechizo hechizo, Artefacto artefacto);
-    void atacar(Personaje p, String nombreHechizo);
+    void atacar(Personaje enemigo, Hechizo hechizo);
 
 }

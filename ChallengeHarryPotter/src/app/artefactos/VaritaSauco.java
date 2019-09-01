@@ -15,4 +15,5 @@ public class VaritaSauco extends Varita implements IReliquiaMuerte, IEsMagico {
 
 
 
+
 }

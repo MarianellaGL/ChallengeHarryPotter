@@ -66,18 +66,12 @@ public List<Hechizo> getHechizos(){
 		
 	}
 
- 
-
     @Override
-    public void atacar(Personaje enemigo, Hechizo hechizo, Artefacto artefacto) {
+    public void atacar(Personaje enemigo, Hechizo hechizo) {
+        enemigo.salud-=hechizo.nivelDaño;
 
     }
 
-
-    @Override
-    public void atacar(Personaje p, String nombreHechizo) {
-
-    }
 
 	
 	}

@@ -7,6 +7,8 @@ import app.transportes.Transporte;
 
 public class HorrorCrux extends Artefacto implements IEsMagico, IReliquiaMuerte {
 
+   
+
     @Override
     public void esMagico(Transporte utilizado, Artefacto obtenido, Criatura ayudante) {
         super.esMagico(utilizado, obtenido, ayudante);

@@ -9,7 +9,9 @@ public class CapaInvisibilidad extends Artefacto implements IEsMagico, IReliquia
  
 
 
-    @Override
+
+
+	@Override
     public void esMagico(Transporte utilizado, Artefacto obtenido, Criatura ayudante) {
 		
 	}

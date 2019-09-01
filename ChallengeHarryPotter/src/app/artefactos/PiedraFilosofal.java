@@ -6,12 +6,11 @@ import app.transportes.Transporte;
 
 public class PiedraFilosofal extends Artefacto implements IEsMagico {
 
+
     @Override
     public void esMagico(Transporte utilizado, Artefacto obtenido, Criatura ayudante) {
         super.esMagico(utilizado, obtenido, ayudante);
     }
 
-    public PiedraFilosofal() {
-    }
-
+   
 }

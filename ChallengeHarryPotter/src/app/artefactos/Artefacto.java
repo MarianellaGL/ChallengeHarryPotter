@@ -14,9 +14,6 @@ public class Artefacto implements IEsMagico, IReliquiaMuerte{
     @Override
     public void esMagico(Transporte utilizado, Artefacto obtenido, Criatura ayudante) {
 
-    
-    
-
 }
 
     @Override
@@ -24,4 +21,6 @@ public class Artefacto implements IEsMagico, IReliquiaMuerte{
 			CapaInvisibilidad cInvisibilidad) {
 		return true;
     
-            }}
+            }
+        
+        }
