@@ -14,11 +14,11 @@ import app.artefactos.SombreroSeleccionador;
 import app.artefactos.Varita;
 import app.artefactos.VaritaSauco;
 import app.hechizos.AvadaKedabra;
-import app.hechizos.CaveInimicum;
 import app.hechizos.Expelliarmus;
 import app.hechizos.Hechizo;
 import app.hechizos.HechizoAtaque;
 import app.hechizos.MaleficioCruciatus;
+import app.hechizos.PetrificusTotallus;
 import app.hechizos.SectumSempra;
 import app.personajes.Criatura;
 import app.personajes.Elfo;
@@ -38,7 +38,7 @@ public class JuegoHarryPotter {
     public static List<Personaje> PersonajesJugables = new ArrayList<Personaje>();
     public static List<Elfo> losElfos = new ArrayList<Elfo>();
     public static List<Criatura> losBichos = new ArrayList<Criatura>();
-    public static List<Transporte> TransportesMagicos = new ArrayList<Transporte>();
+    public static List<Transporte> transportesMagicos = new ArrayList<Transporte>();
     public static List<Mago> LosMagos = new ArrayList<Mago>();
     public static List<Muggle> LosComunes = new ArrayList<Muggle>();
     public static List<HechizoAtaque> Atacan = new ArrayList<HechizoAtaque>();
@@ -72,7 +72,7 @@ public class JuegoHarryPotter {
     }
 
     public static Transporte SubiteAlTransporte(String nombreTransporte) {
-        for (Transporte tr : JuegoHarryPotter.TransportesMagicos) {
+        for (Transporte tr : JuegoHarryPotter.transportesMagicos) {
 
             if (tr.nombreTransporte.equals(nombreTransporte))
 
@@ -143,6 +143,7 @@ public class JuegoHarryPotter {
     }
 
     public static void AgregarArtefacto() {
+        {
         CapaInvisibilidad cInvisibilidad = new CapaInvisibilidad();
         cInvisibilidad.nombreArtefacto = "Capa de Invisibilidad";
         cInvisibilidad.amplificadorDaño = 0.25;
@@ -204,42 +205,44 @@ public class JuegoHarryPotter {
         varita.amplificadorDaño = 0.32;
         varita.amplificadorSalud = 0.5;
         JuegoHarryPotter.artefactos.add(varita);
+        }
     }
 
     public static void SubiteAlTransporte() {
+        {
         AlfombraVoladora alfombraVoladora = new AlfombraVoladora();
         alfombraVoladora.nombreTransporte = "Alfombra Voladora";
-        JuegoHarryPotter.TransportesMagicos.add(alfombraVoladora);
-
+        JuegoHarryPotter.transportesMagicos.add(alfombraVoladora);
+       
         MotocicletaVoladoraSiriusB motosirius = new MotocicletaVoladoraSiriusB();
         motosirius.nombreTransporte = "Moto Sirius Black";
-        JuegoHarryPotter.TransportesMagicos.add(motosirius);
+        JuegoHarryPotter.transportesMagicos.add(motosirius);
 
         ExpresoAHogwarts eHogwarts = new ExpresoAHogwarts();
         eHogwarts.nombreTransporte = "Expreso a Hogwarts";
-        JuegoHarryPotter.TransportesMagicos.add(eHogwarts);
+        JuegoHarryPotter.transportesMagicos.add(eHogwarts);
 
         AutobusNoctambulo aNoctambulo = new AutobusNoctambulo();
         aNoctambulo.nombreTransporte = "Autobús Noctámbulo";
-        JuegoHarryPotter.TransportesMagicos.add(aNoctambulo);
+        JuegoHarryPotter.transportesMagicos.add(aNoctambulo);
 
         Escoba escobaMagica = new Escoba();
         escobaMagica.nombreTransporte = "Nimbus 2000";
-        JuegoHarryPotter.TransportesMagicos.add(escobaMagica);
+        JuegoHarryPotter.transportesMagicos.add(escobaMagica);
 
         Escoba escobaMagica2 = new Escoba();
         escobaMagica2.nombreTransporte = "Saeta de Fuego";
-        JuegoHarryPotter.TransportesMagicos.add(escobaMagica);
+        JuegoHarryPotter.transportesMagicos.add(escobaMagica);
 
         Giratiempo giratiempo = new Giratiempo();
         giratiempo.nombreTransporte = "Giratiempo mágico";
-        JuegoHarryPotter.TransportesMagicos.add(giratiempo);
+        JuegoHarryPotter.transportesMagicos.add(giratiempo);
+        }
 
     }
 
     public static void ElegirHechizo() {
         {
-
             SectumSempra sempra = new SectumSempra();
             sempra.nombreHechizo = "Sectum Sempra";
             sempra.esOscuro = true;
@@ -247,13 +250,13 @@ public class JuegoHarryPotter {
 
             JuegoHarryPotter.hechizos.add(sempra);
 
-            CaveInimicum inimicum = new CaveInimicum();
-            inimicum.nombreHechizo = " Cave Inimicum";
-            inimicum.esOscuro = false;
-            inimicum.nivelDaño = 0;
-            inimicum.nivelDefensa = 75;
+            PetrificusTotallus petrificus = new PetrificusTotallus();
+            petrificus.nombreHechizo = " Petrificus Totallus";
+            petrificus.esOscuro = false;
+            petrificus.nivelDaño = 100;
+            petrificus.nivelDefensa = 75;
 
-            JuegoHarryPotter.hechizos.add(inimicum);
+            JuegoHarryPotter.hechizos.add(petrificus);
 
             AvadaKedabra kedabra = new AvadaKedabra();
             kedabra.nombreHechizo = "Avada Kedabra";

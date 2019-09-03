@@ -18,7 +18,7 @@ public class Mago extends Personaje implements IHacerMagia {
     public List<Hechizo> hechizos = new ArrayList<Hechizo>();
     public List<Poder> losPoderes = new ArrayList<Poder>();
     public List<Artefacto> artefactos = new ArrayList<Artefacto>();
-    public List<Transporte> gonnaRide = new ArrayList<Transporte>();
+    public List<Transporte> transportesMagicos = new ArrayList<Transporte>();
   
 
     public Poder getPoder() {
