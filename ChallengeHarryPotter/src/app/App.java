@@ -56,7 +56,7 @@ public class App {
         System.out.println("La salud de " + pj1.nombre + " es de " + pj1.salud);
         System.out.println("La salud de " + pj2.nombre + " es de " + pj2.salud);
 
-        System.out.println("El poder actual de " + pj1.nombre + pj1.energiaMagica + " y su salud es de " +pj1.salud);
+        System.out.println("El poder actual de " + pj1.nombre + pj1.energiaMagica + " y su salud es de " + pj1.salud);
 
         boolean atacapj1 = true;
         int tipoHechizo = 0;
@@ -88,7 +88,8 @@ public class App {
             elArtefacto = hCrux;
 
             System.out.println("Has elegido un HorrorCrux");
-            System.out.println("El poder actual de " + pj1.nombre + pj1.energiaMagica + " y su salud es de " +pj1.salud);
+            System.out
+                    .println("El poder actual de " + pj1.nombre + pj1.energiaMagica + " y su salud es de " + pj1.salud);
             break;
         case 3:
             elArtefacto = sSlytherin;
@@ -220,17 +221,20 @@ public class App {
 
         if (pj1.salud == 0) {
             System.out.println(pj1.nombre + " Ha ganado el duelo.");
-            System.out.println(pj1.nombre + " Ha subido en " + elTransporte.nombreTransporte + " Y se ha retirado victorioso");
+            System.out.println(
+                    pj1.nombre + " Ha subido en " + elTransporte.nombreTransporte + " Y se ha retirado victorioso");
 
         } else if (pj2.salud == 0) {
 
             System.out.println(pj1.nombre + " Ha ganado el duelo.");
 
-            System.out.println(pj1.nombre + " Ha subido en " + elTransporte.nombreTransporte + " Y se ha retirado victorioso");
+            System.out.println(
+                    pj1.nombre + " Ha subido en " + elTransporte.nombreTransporte + " Y se ha retirado victorioso");
 
         } else {
             System.out.println(pj1.nombre + " Ha perdido el duelo ");
-            System.out.println(pj1.nombre + " Ha subido en " + elTransporte.nombreTransporte + " Y se ha retirado victorioso");
+            System.out.println(
+                    pj1.nombre + " Ha subido en " + elTransporte.nombreTransporte + " Y se ha retirado victorioso");
         }
     }
 

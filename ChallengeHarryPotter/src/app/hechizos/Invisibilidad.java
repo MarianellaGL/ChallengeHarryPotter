@@ -1,7 +1,5 @@
 package app.hechizos;
 
+public class Invisibilidad extends Poder {
 
-public class Invisibilidad extends Poder{
-
-    
 }

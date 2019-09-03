@@ -12,7 +12,6 @@ public class Personaje {
     public static List<Muggle> LosComunes = new ArrayList<Muggle>();
     public List<Elfo> losElfos = new ArrayList<Elfo>();
     public List<Criatura> losBichos = new ArrayList<Criatura>();
-    
 
     public Mago getMago(String nombre) {
 
@@ -26,13 +25,13 @@ public class Personaje {
     }
 
     public Criatura getCriatura(String nombreCriatura) {
-        for (Criatura cr: this.losBichos) 
-            if (cr.nombreCriatura == nombre ) {
+        for (Criatura cr : this.losBichos)
+            if (cr.nombreCriatura == nombre) {
 
                 return cr;
             }
 
-            return null;
+        return null;
 
     }
 

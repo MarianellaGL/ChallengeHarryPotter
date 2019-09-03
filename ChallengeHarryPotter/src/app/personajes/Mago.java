@@ -19,7 +19,6 @@ public class Mago extends Personaje implements IHacerMagia {
     public List<Poder> losPoderes = new ArrayList<Poder>();
     public List<Artefacto> artefactos = new ArrayList<Artefacto>();
     public List<Transporte> transportesMagicos = new ArrayList<Transporte>();
-  
 
     public Poder getPoder() {
 
@@ -34,14 +33,14 @@ public class Mago extends Personaje implements IHacerMagia {
 
     }
 
-    public Transporte getTransporte(){
+    public Transporte getTransporte() {
 
-        for(Transporte t: transportesMagicos)
-        if(t.nombreTransporte.equals(nombre)) {
-            return t;
-        }
+        for (Transporte t : transportesMagicos)
+            if (t.nombreTransporte.equals(nombre)) {
+                return t;
+            }
 
-           return null; 
+        return null;
     }
 
     public void setPoderInicial(int poderInicial) {
@@ -51,28 +50,21 @@ public class Mago extends Personaje implements IHacerMagia {
     @Override
     public void aprender(Hechizo h) {
 
-    
     }
 
     public List<Hechizo> getHechizos() {
 
         return hechizos;
     }
-    
-   
+
     @Override
     public List<Artefacto> getArtefactos() {
         return artefactos;
 
     }
+
     @Override
     public void getPoderInicial() {
-
-      
-
-
-
-    
 
         // amplificar daño si vale uno devuelve si no te toma es porque hay que casteado
 
@@ -81,50 +73,38 @@ public class Mago extends Personaje implements IHacerMagia {
     @Override
     public void setPoderInicial(Poder p) {
 
-        
-
     }
 
     @Override
     public void atacar(Personaje enemigo, Hechizo hechizo) {
 
-        for (Artefacto ar : this.artefactos) {    
-            
-         
-                enemigo.salud -= (hechizo.nivelDaño * ar.amplificadorDaño);
-    
+        for (Artefacto ar : this.artefactos) {
 
+            enemigo.salud -= (hechizo.nivelDaño * ar.amplificadorDaño);
 
-            
             if (ar.esReliquia == true) {
-    
-              enemigo.salud -= (hechizo.nivelDaño * ar.amplificadorDaño) +(energiaMagica*=2);
+
+                enemigo.salud -= (hechizo.nivelDaño * ar.amplificadorDaño) + (energiaMagica *= 2);
 
             }
         }
 
         enemigo.salud -= hechizo.nivelDaño;
 
-        if(hechizo.esOscuro){
-            hechizo.nivelDaño *=2;
+        if (hechizo.esOscuro) {
+            hechizo.nivelDaño *= 2;
 
-            this.esMagoOscuro= true;
-            
-            System.out.println( nombre + " se ha mostrado como mago oscuro");}
+            this.esMagoOscuro = true;
 
-        
-    
+            System.out.println(nombre + " se ha mostrado como mago oscuro");
         }
+
     }
+}
 
+// niv daño 50 ampl daño 1.2 = dño total
+// if(h.esoscuro) dañotot *=2
+// this.magooscuro= true;
 
-
-
-
-
-//niv daño 50 ampl daño 1.2 = dño total
-//if(h.esoscuro) dañotot *=2
-//this.magooscuro= true;
-
-//if(this.energia>h.energia)
-//this.energia = h.energia;
+// if(this.energia>h.energia)
+// this.energia = h.energia;

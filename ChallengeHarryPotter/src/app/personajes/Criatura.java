@@ -4,7 +4,7 @@ import app.artefactos.Artefacto;
 import app.interfaces.IEsMagico;
 import app.transportes.Transporte;
 
-public class Criatura extends Personaje implements IEsMagico{
+public class Criatura extends Personaje implements IEsMagico {
 
     public String nombreCriatura;
     public int magiaInicial;
@@ -14,8 +14,5 @@ public class Criatura extends Personaje implements IEsMagico{
     @Override
     public void esMagico(Transporte utilizado, Artefacto obtenido, Criatura ayudante) {
     }
-    
 
-
-    
 }

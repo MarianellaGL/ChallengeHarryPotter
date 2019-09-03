@@ -12,20 +12,16 @@ import app.personajes.Personaje;
  */
 public interface IHacerMagia {
 
-    
-
     void getPoderInicial();
-    
 
-    void setPoderInicial( Poder P);
+    void setPoderInicial(Poder P);
 
     void aprender(Hechizo h);
 
-    List<Hechizo> getHechizos(); 
+    List<Hechizo> getHechizos();
 
     List<Artefacto> getArtefactos();
 
     void atacar(Personaje enemigo, Hechizo hechizo);
 
 }
-

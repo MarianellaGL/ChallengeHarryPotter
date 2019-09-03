@@ -114,7 +114,7 @@ public class JuegoHarryPotter {
         magoHarry.esMagoOscuro = false;
         magoHarry.energiaMagica = 40 + 80;
         magoHarry.poderInicial = 80 + 200;
-        magoHarry.salud = + 3000;
+        magoHarry.salud = +3000;
 
         JuegoHarryPotter.losMagos.add(magoHarry);
         JuegoHarryPotter.personajesJugables.add(magoHarry);
@@ -125,7 +125,7 @@ public class JuegoHarryPotter {
         magoSnape.esMagoOscuro = false;
         magoSnape.energiaMagica = 40 + 150;
         magoSnape.poderInicial = 80 + 300;
-        magoSnape.salud = + 50000;
+        magoSnape.salud = +50000;
 
         JuegoHarryPotter.losMagos.add(magoSnape);
         JuegoHarryPotter.personajesJugables.add(magoSnape);
@@ -146,99 +146,99 @@ public class JuegoHarryPotter {
 
     public static void AgregarArtefacto() {
         {
-        CapaInvisibilidad cInvisibilidad = new CapaInvisibilidad();
-        cInvisibilidad.nombreArtefacto = "Capa de Invisibilidad";
-        cInvisibilidad.amplificadorDaño = 0.25;
-        cInvisibilidad.amplificadorSalud = 10;
-      
-        JuegoHarryPotter.artefactos.add(cInvisibilidad);
+            CapaInvisibilidad cInvisibilidad = new CapaInvisibilidad();
+            cInvisibilidad.nombreArtefacto = "Capa de Invisibilidad";
+            cInvisibilidad.amplificadorDaño = 0.25;
+            cInvisibilidad.amplificadorSalud = 10;
 
-        VaritaSauco vSauco = new VaritaSauco();
-        vSauco.nombreArtefacto = "Varita de Sauco";
-        vSauco.amplificadorDaño = 20 * 0.25;
-        vSauco.amplificadorSalud = 20 * 10;
-      
-        JuegoHarryPotter.artefactos.add(vSauco);
+            JuegoHarryPotter.artefactos.add(cInvisibilidad);
 
-        CopaHelgaHufflepuff hPuff = new CopaHelgaHufflepuff();
-        hPuff.nombreArtefacto = "Copa helga Hufflepuff";
-        hPuff.amplificadorDaño = 20 * 0.10;
-        hPuff.amplificadorSalud = 20 * 0.50;
-        JuegoHarryPotter.artefactos.add(hPuff);
+            VaritaSauco vSauco = new VaritaSauco();
+            vSauco.nombreArtefacto = "Varita de Sauco";
+            vSauco.amplificadorDaño = 20 * 0.25;
+            vSauco.amplificadorSalud = 20 * 10;
 
-        DiademaRowenaRevenclaw rRevenclaw = new DiademaRowenaRevenclaw();
-        rRevenclaw.nombreArtefacto = "Diadema RowenaRevenclaw";
-        rRevenclaw.amplificadorDaño = 20 * 0.15;
-        rRevenclaw.amplificadorSalud = 20 * 0.10;
-        JuegoHarryPotter.artefactos.add(rRevenclaw);
+            JuegoHarryPotter.artefactos.add(vSauco);
 
-        DiarioTomRiddle tRiddle = new DiarioTomRiddle();
-        tRiddle.nombreArtefacto = "Diario Tom Riddle";
-        tRiddle.amplificadorDaño = 20 * 0.5;
-        tRiddle.amplificadorSalud = 20 * 0.7;
-        JuegoHarryPotter.artefactos.add(tRiddle);
+            CopaHelgaHufflepuff hPuff = new CopaHelgaHufflepuff();
+            hPuff.nombreArtefacto = "Copa helga Hufflepuff";
+            hPuff.amplificadorDaño = 20 * 0.10;
+            hPuff.amplificadorSalud = 20 * 0.50;
+            JuegoHarryPotter.artefactos.add(hPuff);
 
-        GuardapeloSalazarSlytherin sSlytherin = new GuardapeloSalazarSlytherin();
-        sSlytherin.nombreArtefacto = "Guardapelo Salaar Slytherin";
-        sSlytherin.amplificadorDaño = 0.5;
-        sSlytherin.amplificadorSalud = 0.3;
-        JuegoHarryPotter.artefactos.add(sSlytherin);
+            DiademaRowenaRevenclaw rRevenclaw = new DiademaRowenaRevenclaw();
+            rRevenclaw.nombreArtefacto = "Diadema RowenaRevenclaw";
+            rRevenclaw.amplificadorDaño = 20 * 0.15;
+            rRevenclaw.amplificadorSalud = 20 * 0.10;
+            JuegoHarryPotter.artefactos.add(rRevenclaw);
 
-        HorrorCrux hCrux = new HorrorCrux();
-        hCrux.nombreArtefacto = "Horror Crux";
-        hCrux.amplificadorDaño = 0.25;
-        hCrux.amplificadorSalud = 0.15;
-        JuegoHarryPotter.artefactos.add(hCrux);
+            DiarioTomRiddle tRiddle = new DiarioTomRiddle();
+            tRiddle.nombreArtefacto = "Diario Tom Riddle";
+            tRiddle.amplificadorDaño = 20 * 0.5;
+            tRiddle.amplificadorSalud = 20 * 0.7;
+            JuegoHarryPotter.artefactos.add(tRiddle);
 
-        PiedraFilosofal pFilosofal = new PiedraFilosofal();
-        pFilosofal.nombreArtefacto = "Piedra Filosofal";
-        pFilosofal.amplificadorDaño = 0.75;
-        pFilosofal.amplificadorSalud = 0.15;
-        JuegoHarryPotter.artefactos.add(pFilosofal);
+            GuardapeloSalazarSlytherin sSlytherin = new GuardapeloSalazarSlytherin();
+            sSlytherin.nombreArtefacto = "Guardapelo Salaar Slytherin";
+            sSlytherin.amplificadorDaño = 0.5;
+            sSlytherin.amplificadorSalud = 0.3;
+            JuegoHarryPotter.artefactos.add(sSlytherin);
 
-        SombreroSeleccionador sSeleccionador = new SombreroSeleccionador();
-        sSeleccionador.nombreArtefacto = "Sombrero Seleccionador";
-        sSeleccionador.amplificadorDaño = 0.5;
-        sSeleccionador.amplificadorSalud = 0.2;
-        JuegoHarryPotter.artefactos.add(sSeleccionador);
+            HorrorCrux hCrux = new HorrorCrux();
+            hCrux.nombreArtefacto = "Horror Crux";
+            hCrux.amplificadorDaño = 0.25;
+            hCrux.amplificadorSalud = 0.15;
+            JuegoHarryPotter.artefactos.add(hCrux);
 
-        Varita varita = new Varita();
-        varita.nombreArtefacto = "Varita Pelo de Unicornio";
-        varita.amplificadorDaño = 0.32;
-        varita.amplificadorSalud = 0.5;
-        JuegoHarryPotter.artefactos.add(varita);
+            PiedraFilosofal pFilosofal = new PiedraFilosofal();
+            pFilosofal.nombreArtefacto = "Piedra Filosofal";
+            pFilosofal.amplificadorDaño = 0.75;
+            pFilosofal.amplificadorSalud = 0.15;
+            JuegoHarryPotter.artefactos.add(pFilosofal);
+
+            SombreroSeleccionador sSeleccionador = new SombreroSeleccionador();
+            sSeleccionador.nombreArtefacto = "Sombrero Seleccionador";
+            sSeleccionador.amplificadorDaño = 0.5;
+            sSeleccionador.amplificadorSalud = 0.2;
+            JuegoHarryPotter.artefactos.add(sSeleccionador);
+
+            Varita varita = new Varita();
+            varita.nombreArtefacto = "Varita Pelo de Unicornio";
+            varita.amplificadorDaño = 0.32;
+            varita.amplificadorSalud = 0.5;
+            JuegoHarryPotter.artefactos.add(varita);
         }
     }
 
     public static void SubiteAlTransporte() {
         {
-        AlfombraVoladora alfombraVoladora = new AlfombraVoladora();
-        alfombraVoladora.nombreTransporte = "Alfombra Voladora";
-        JuegoHarryPotter.transportesMagicos.add(alfombraVoladora);
-       
-        MotocicletaVoladoraSiriusB motosirius = new MotocicletaVoladoraSiriusB();
-        motosirius.nombreTransporte = "Moto Sirius Black";
-        JuegoHarryPotter.transportesMagicos.add(motosirius);
+            AlfombraVoladora alfombraVoladora = new AlfombraVoladora();
+            alfombraVoladora.nombreTransporte = "Alfombra Voladora";
+            JuegoHarryPotter.transportesMagicos.add(alfombraVoladora);
 
-        ExpresoAHogwarts eHogwarts = new ExpresoAHogwarts();
-        eHogwarts.nombreTransporte = "Expreso a Hogwarts";
-        JuegoHarryPotter.transportesMagicos.add(eHogwarts);
+            MotocicletaVoladoraSiriusB motosirius = new MotocicletaVoladoraSiriusB();
+            motosirius.nombreTransporte = "Moto Sirius Black";
+            JuegoHarryPotter.transportesMagicos.add(motosirius);
 
-        AutobusNoctambulo aNoctambulo = new AutobusNoctambulo();
-        aNoctambulo.nombreTransporte = "Autobús Noctámbulo";
-        JuegoHarryPotter.transportesMagicos.add(aNoctambulo);
+            ExpresoAHogwarts eHogwarts = new ExpresoAHogwarts();
+            eHogwarts.nombreTransporte = "Expreso a Hogwarts";
+            JuegoHarryPotter.transportesMagicos.add(eHogwarts);
 
-        Escoba escobaMagica = new Escoba();
-        escobaMagica.nombreTransporte = "Nimbus 2000";
-        JuegoHarryPotter.transportesMagicos.add(escobaMagica);
+            AutobusNoctambulo aNoctambulo = new AutobusNoctambulo();
+            aNoctambulo.nombreTransporte = "Autobús Noctámbulo";
+            JuegoHarryPotter.transportesMagicos.add(aNoctambulo);
 
-        Escoba escobaMagica2 = new Escoba();
-        escobaMagica2.nombreTransporte = "Saeta de Fuego";
-        JuegoHarryPotter.transportesMagicos.add(escobaMagica);
+            Escoba escobaMagica = new Escoba();
+            escobaMagica.nombreTransporte = "Nimbus 2000";
+            JuegoHarryPotter.transportesMagicos.add(escobaMagica);
 
-        Giratiempo giratiempo = new Giratiempo();
-        giratiempo.nombreTransporte = "Giratiempo mágico";
-        JuegoHarryPotter.transportesMagicos.add(giratiempo);
+            Escoba escobaMagica2 = new Escoba();
+            escobaMagica2.nombreTransporte = "Saeta de Fuego";
+            JuegoHarryPotter.transportesMagicos.add(escobaMagica);
+
+            Giratiempo giratiempo = new Giratiempo();
+            giratiempo.nombreTransporte = "Giratiempo mágico";
+            JuegoHarryPotter.transportesMagicos.add(giratiempo);
         }
 
     }
@@ -255,7 +255,7 @@ public class JuegoHarryPotter {
             PetrificusTotallus petrificus = new PetrificusTotallus();
             petrificus.nombreHechizo = " Petrificus Totallus";
             petrificus.esOscuro = false;
-            petrificus.nivelDaño = 100;
+            petrificus.nivelDaño = 500;
 
             JuegoHarryPotter.hechizos.add(petrificus);
 

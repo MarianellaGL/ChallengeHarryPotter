@@ -1,4 +1,5 @@
 package app.hechizos;
+
 import app.interfaces.IHacerMagia;
 
 /**

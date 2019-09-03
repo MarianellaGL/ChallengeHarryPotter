@@ -6,25 +6,17 @@ import app.personajes.Criatura;
 import app.transportes.Transporte;
 
 public class CapaInvisibilidad extends Artefacto implements IEsMagico, IReliquiaMuerte {
- 
 
-
-
-
-	@Override
+    @Override
     public void esMagico(Transporte utilizado, Artefacto obtenido, Criatura ayudante) {
-		
-	}
+
+    }
 
     @Override
     public boolean esReliquia(VaritaSauco vSauco, PiedraResurreccion pResurreccion, HorrorCrux hCrux,
             CapaInvisibilidad cInvisibilidad) {
         return true;
 
-
     }
 
-    
-
-    
 }

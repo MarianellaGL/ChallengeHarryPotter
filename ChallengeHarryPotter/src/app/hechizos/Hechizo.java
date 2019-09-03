@@ -18,16 +18,13 @@ public class Hechizo extends Poder implements IHacerMagia {
     public int nivelDaño;
     public String nombreHechizo;
     public int nivelDefensa;
-    
-    public List<HechizoAtaque> hechizoAtaque = new ArrayList<HechizoAtaque>();
 
-  
+    public List<HechizoAtaque> hechizoAtaque = new ArrayList<HechizoAtaque>();
 
     @Override
     public List<Artefacto> getArtefactos() {
         return null;
     }
-
 
     @Override
     public void setPoderInicial(Poder P) {
@@ -39,11 +36,11 @@ public class Hechizo extends Poder implements IHacerMagia {
 
     }
 
-
     @Override
-	public void getPoderInicial() {
-		
+    public void getPoderInicial() {
+
     }
+
     @Override
     public List<Hechizo> getHechizos() {
         return null;

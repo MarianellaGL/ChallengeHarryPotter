@@ -5,7 +5,6 @@ import app.interfaces.IHacerMagia;
 /**
  * WingardiumLeviosa
  */
-public class WingardiumLeviosa extends HechizoOcio implements IHacerMagia{
+public class WingardiumLeviosa extends HechizoOcio implements IHacerMagia {
 
-    
 }

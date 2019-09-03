@@ -13,5 +13,5 @@ public class Varita extends Artefacto implements IEsMagico {
     public void esMagico(Transporte utilizado, Artefacto obtenido, Criatura ayudante) {
         super.esMagico(utilizado, obtenido, ayudante);
     }
-    
+
 }

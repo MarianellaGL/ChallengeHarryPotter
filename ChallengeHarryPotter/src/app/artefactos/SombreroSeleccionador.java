@@ -14,6 +14,4 @@ public class SombreroSeleccionador extends Artefacto implements IEsMagico {
         super.esMagico(utilizado, obtenido, ayudante);
     }
 
-
-    
 }
