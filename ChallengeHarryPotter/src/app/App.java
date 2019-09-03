@@ -5,7 +5,6 @@ import java.util.Scanner;
 import app.artefactos.Artefacto;
 import app.hechizos.Hechizo;
 import app.interfaces.IHacerMagia;
-import app.personajes.Elfo;
 import app.personajes.Mago;
 import app.transportes.Transporte;
 
@@ -21,10 +20,10 @@ public class App {
 
         Teclado.nextLine();
 
-        System.out.println("pulse 1 para elegir a Harry Potter o 2 para elegir a Severus Snape o 3 para elegir a Dobby");
+        System.out
+                .println("pulse 1 para elegir a Harry Potter o 2 para elegir a Severus Snape o 3 para elegir a Dobby");
         Mago pj1 = (Mago) JuegoHarryPotter.ElegirPersonaje("Harry Potter");
         Mago pj2 = (Mago) JuegoHarryPotter.ElegirPersonaje("Severus Snape");
-        Elfo pj3 = (Elfo) JuegoHarryPotter.ElegirPersonaje("Elfo libre Dobby");
         int opcion = Teclado.nextInt();
         Teclado.nextLine();
 
@@ -43,13 +42,8 @@ public class App {
             pj1 = pj2;
             pj2 = pjtmp;
 
-
             // intercambio de jugadores
             break;
-
-            case 3: 
-            System.out.println("Elegir a Elfo libre Dobby");
-    
 
         default:
 
@@ -85,6 +79,8 @@ public class App {
         switch (artefactos) {
         case 1:
             nombreArtefacto = pFilosofal;
+
+            System.out.println("Has elegido una reliquia de la muerte");
             break;
 
         case 2:
