@@ -34,6 +34,16 @@ public class Mago extends Personaje implements IHacerMagia {
 
     }
 
+    public Transporte getTransporte(){
+
+        for(Transporte t: transportesMagicos)
+        if(t.nombreTransporte.equals(nombre)) {
+            return t;
+        }
+
+           return null; 
+    }
+
     public void setPoderInicial(int poderInicial) {
         this.poderInicial = poderInicial;
     }
@@ -48,7 +58,8 @@ public class Mago extends Personaje implements IHacerMagia {
 
         return hechizos;
     }
-
+    
+   
     @Override
     public List<Artefacto> getArtefactos() {
         return artefactos;
@@ -76,6 +87,23 @@ public class Mago extends Personaje implements IHacerMagia {
 
     @Override
     public void atacar(Personaje enemigo, Hechizo hechizo) {
+
+        for (Artefacto ar : this.artefactos) {    
+            
+         
+                enemigo.salud -= (hechizo.nivelDaño * ar.amplificadorDaño);
+    
+
+
+            // "te"guarda el objeto temporada "this" es yo mismo, el objeto mismo
+    
+            if (ar.esReliquia == true) {
+    
+              enemigo.salud -= (hechizo.nivelDaño * ar.amplificadorDaño) +(energiaMagica*=2);
+
+            }
+        }
+
         enemigo.salud -= hechizo.nivelDaño;
 
         if(hechizo.esOscuro){
@@ -85,23 +113,12 @@ public class Mago extends Personaje implements IHacerMagia {
             
             System.out.println( nombre + " se ha mostrado como mago oscuro");}
 
-        for (Artefacto ar : this.artefactos) {
-
-            // "te"guarda el objeto temporada "this" es yo mismo, el objeto mismo
-    
-            if (ar.esReliquia == true) {
-    
-              energiaMagica*= 2;
-            }
-    
-        }
         
     
-
-
-           
         }
     }
+
+
 
 
 

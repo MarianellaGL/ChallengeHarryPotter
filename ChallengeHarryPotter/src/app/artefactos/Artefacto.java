@@ -14,8 +14,6 @@ public class Artefacto implements IEsMagico, IReliquiaMuerte{
     @Override
     public void esMagico(Transporte utilizado, Artefacto obtenido, Criatura ayudante) {
 
-       
-
 
 
 

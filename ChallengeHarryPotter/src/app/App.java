@@ -20,8 +20,7 @@ public class App {
 
         Teclado.nextLine();
 
-        System.out
-                .println("pulse 1 para elegir a Harry Potter o 2 para elegir a Severus Snape");
+        System.out.println("pulse 1 para elegir a Harry Potter o 2 para elegir a Severus Snape");
         Mago pj1 = (Mago) JuegoHarryPotter.ElegirPersonaje("Harry Potter");
         Mago pj2 = (Mago) JuegoHarryPotter.ElegirPersonaje("Severus Snape");
         int opcion = Teclado.nextInt();
@@ -57,13 +56,15 @@ public class App {
         System.out.println("La salud de " + pj1.nombre + " es de " + pj1.salud);
         System.out.println("La salud de " + pj2.nombre + " es de " + pj2.salud);
 
+        System.out.println("El poder actual de " + pj1.nombre + pj1.energiaMagica + " y su salud es de " +pj1.salud);
+
         boolean atacapj1 = true;
         int tipoHechizo = 0;
         int artefactos = 0;
-        int TransportesMagicos = 0;
+        int transportesMagicos = 0;
         Hechizo hechizoAtacante = null;
-        Artefacto nombreArtefacto = null;
-        Transporte nombreTransporte = null;
+        Artefacto elArtefacto = null;
+        Transporte elTransporte = null;
 
         System.out.println(
                 "Elegi el artefacto a utilizar: 1= Piedra Filosofal, 2= Horror Crux, 3=Guarda pelo, 4= Diario Tom Riddle");
@@ -78,19 +79,25 @@ public class App {
 
         switch (artefactos) {
         case 1:
-            nombreArtefacto = pFilosofal;
+            elArtefacto = pFilosofal;
 
             System.out.println("Has elegido una reliquia de la muerte");
             break;
 
         case 2:
-            nombreArtefacto = hCrux;
+            elArtefacto = hCrux;
+
+            System.out.println("Has elegido un HorrorCrux");
+            System.out.println("El poder actual de " + pj1.nombre + pj1.energiaMagica + " y su salud es de " +pj1.salud);
             break;
         case 3:
-            nombreArtefacto = sSlytherin;
+            elArtefacto = sSlytherin;
+            System.out.println("Has elegido el guardapelo de Salazar Sytherin");
             break;
         case 4:
-            nombreArtefacto = tRiddle;
+            elArtefacto = tRiddle;
+
+            System.out.println("Has elegido el Diario de Tom Riddle");
             break;
 
         default:
@@ -100,7 +107,7 @@ public class App {
 
         System.out.println(
                 "Elegi el transporte: 1=Alfombra Voladora , 2= Moto de Sirius Black, 3= Expreso a Hogwarts, 4=Autobus Noctambulo, 5= Escoba Nimbus 2000, 6= Escoba Saeta de fuego, 7= Giratiempo");
-        TransportesMagicos = Teclado.nextInt();
+        transportesMagicos = Teclado.nextInt();
         Transporte alfombraVoladora = (Transporte) JuegoHarryPotter.SubiteAlTransporte("Alfombra Voladora");
         Transporte motosirius = (Transporte) JuegoHarryPotter.SubiteAlTransporte("Moto Sirius Black");
         Transporte eHogwarts = (Transporte) JuegoHarryPotter.SubiteAlTransporte("Expreso a Hogwarts");
@@ -111,32 +118,32 @@ public class App {
 
         Teclado.nextLine();
 
-        switch (TransportesMagicos) {
+        switch (transportesMagicos) {
         case 1:
-            nombreTransporte = alfombraVoladora;
+            elTransporte = alfombraVoladora;
             break;
 
         case 2:
-            nombreTransporte = motosirius;
+            elTransporte = motosirius;
             break;
         case 3:
-            nombreTransporte = eHogwarts;
+            elTransporte = eHogwarts;
             break;
         case 4:
-            nombreTransporte = aNoctambulo;
+            elTransporte = aNoctambulo;
             break;
 
         case 5:
-            nombreTransporte = escobaMagica;
+            elTransporte = escobaMagica;
 
             break;
 
         case 6:
-            nombreTransporte = escobaMagica2;
+            elTransporte = escobaMagica2;
 
             break;
         case 7:
-            nombreTransporte = giratiempo;
+            elTransporte = giratiempo;
 
             break;
 
@@ -151,13 +158,14 @@ public class App {
 
             if (atacapj1) {
                 System.out.println(
-                        "Elegi el hechizo a utilizar 1 = Sectum Sempra, 2 = Avada Kedabra, 3= Expelliarmus, 4= Cave Inimicun, 5= Maleficio Cruciatus");
+                        "Elegi el hechizo a utilizar 1 = Sectum Sempra, 2 = Avada Kedabra, 3= Expelliarmus, 4= Petrificus Totallus, 5= Maleficio Cruciatus");
+
                 tipoHechizo = Teclado.nextInt();
 
                 Hechizo sempra = (Hechizo) JuegoHarryPotter.ElegirHechizo("Sectum Sempra");
                 Hechizo kedabra = (Hechizo) JuegoHarryPotter.ElegirHechizo("Avada Kedabra");
                 Hechizo expelliarmus = (Hechizo) JuegoHarryPotter.ElegirHechizo("Expelliarmus");
-                Hechizo inimicum = (Hechizo) JuegoHarryPotter.ElegirHechizo("Cave Inimicum");
+                Hechizo petrificus = (Hechizo) JuegoHarryPotter.ElegirHechizo("Petrificus Totallus");
                 Hechizo cruciatus = (Hechizo) JuegoHarryPotter.ElegirHechizo("Maleficio Cruciatus");
 
                 switch (tipoHechizo) {
@@ -176,7 +184,7 @@ public class App {
                     System.out.println(pj1.nombre + " Ha usado " + hechizoAtacante.nombreHechizo);
                     break;
                 case 4:
-                    hechizoAtacante = inimicum;
+                    hechizoAtacante = petrificus;
                     System.out.println(pj1.nombre + " Ha usado " + hechizoAtacante.nombreHechizo);
                     break;
                 case 5:
@@ -212,17 +220,17 @@ public class App {
 
         if (pj1.salud == 0) {
             System.out.println(pj1.nombre + " Ha ganado el duelo.");
-
-            System.out.println(pj1.nombre + " Ha subido en " + nombreTransporte + "Y se ha retirado victorioso");
+            System.out.println(pj1.nombre + " Ha subido en " + elTransporte.nombreTransporte + " Y se ha retirado victorioso");
 
         } else if (pj2.salud == 0) {
 
             System.out.println(pj1.nombre + " Ha ganado el duelo.");
-            System.out.println(pj1.nombre + " Ha subido en " + nombreTransporte + "Y se ha retirado victorioso");
+
+            System.out.println(pj1.nombre + " Ha subido en " + elTransporte.nombreTransporte + " Y se ha retirado victorioso");
+
         } else {
             System.out.println(pj1.nombre + " Ha perdido el duelo ");
-            System.out.println(pj2.nombre + " Ha subido en " + nombreTransporte + "Y se ha retirado victorioso");
-
+            System.out.println(pj1.nombre + " Ha subido en " + elTransporte.nombreTransporte + " Y se ha retirado victorioso");
         }
     }
 

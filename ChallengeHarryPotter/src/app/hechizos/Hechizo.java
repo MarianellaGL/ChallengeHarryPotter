@@ -1,5 +1,6 @@
 package app.hechizos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import app.artefactos.Artefacto;
@@ -16,7 +17,9 @@ public class Hechizo extends Poder implements IHacerMagia {
     public int nivelEnergia;
     public int nivelDaño;
     public String nombreHechizo;
-	public int nivelDefensa;
+    public int nivelDefensa;
+    
+    public List<HechizoAtaque> hechizoAtaque = new ArrayList<HechizoAtaque>();
 
   
 

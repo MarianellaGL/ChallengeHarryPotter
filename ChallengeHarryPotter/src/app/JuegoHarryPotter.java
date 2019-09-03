@@ -18,6 +18,7 @@ import app.hechizos.Expelliarmus;
 import app.hechizos.Hechizo;
 import app.hechizos.HechizoAtaque;
 import app.hechizos.MaleficioCruciatus;
+import app.hechizos.Parseltongue;
 import app.hechizos.PetrificusTotallus;
 import app.hechizos.SectumSempra;
 import app.personajes.Criatura;
@@ -35,19 +36,19 @@ import app.transportes.Transporte;
 
 public class JuegoHarryPotter {
 
-    public static List<Personaje> PersonajesJugables = new ArrayList<Personaje>();
+    public static List<Personaje> personajesJugables = new ArrayList<Personaje>();
     public static List<Elfo> losElfos = new ArrayList<Elfo>();
     public static List<Criatura> losBichos = new ArrayList<Criatura>();
     public static List<Transporte> transportesMagicos = new ArrayList<Transporte>();
-    public static List<Mago> LosMagos = new ArrayList<Mago>();
-    public static List<Muggle> LosComunes = new ArrayList<Muggle>();
-    public static List<HechizoAtaque> Atacan = new ArrayList<HechizoAtaque>();
+    public static List<Mago> losMagos = new ArrayList<Mago>();
+    public static List<Muggle> losComunes = new ArrayList<Muggle>();
+    public static List<HechizoAtaque> hechizoAtaque = new ArrayList<HechizoAtaque>();
     public static List<Hechizo> hechizos = new ArrayList<Hechizo>();
     public static List<Artefacto> artefactos = new ArrayList<Artefacto>();
 
     public static Personaje ElegirPersonaje(String nombre) {
 
-        for (Personaje p : JuegoHarryPotter.PersonajesJugables) {
+        for (Personaje p : JuegoHarryPotter.personajesJugables) {
 
             if (p.nombre.equals(nombre))
 
@@ -97,6 +98,7 @@ public class JuegoHarryPotter {
     public static void InicializarJuego() {
         AgregarPersonaje();
         AgregarArtefacto();
+        SubiteAlTransporte();
         ElegirHechizo();
     }
     // ihacer magia y lo buscas cuando tenes los dos objetos personajes lo haces
@@ -112,10 +114,10 @@ public class JuegoHarryPotter {
         magoHarry.esMagoOscuro = false;
         magoHarry.energiaMagica = 40 + 80;
         magoHarry.poderInicial = 80 + 200;
-        magoHarry.salud = 100 + 30000;
+        magoHarry.salud = 100 + 300;
 
-        JuegoHarryPotter.LosMagos.add(magoHarry);
-        JuegoHarryPotter.PersonajesJugables.add(magoHarry);
+        JuegoHarryPotter.losMagos.add(magoHarry);
+        JuegoHarryPotter.personajesJugables.add(magoHarry);
 
         Mago magoSnape = new Mago();
         magoSnape.nombre = "Severus Snape";
@@ -125,8 +127,8 @@ public class JuegoHarryPotter {
         magoSnape.poderInicial = 80 + 300;
         magoSnape.salud = 100 + 50000;
 
-        JuegoHarryPotter.LosMagos.add(magoSnape);
-        JuegoHarryPotter.PersonajesJugables.add(magoSnape);
+        JuegoHarryPotter.losMagos.add(magoSnape);
+        JuegoHarryPotter.personajesJugables.add(magoSnape);
 
         Elfo elfoDobby = new Elfo();
         elfoDobby.nombreCriatura = "Elfo Dobby";
@@ -138,7 +140,7 @@ public class JuegoHarryPotter {
 
         JuegoHarryPotter.losBichos.add(elfoDobby);
         JuegoHarryPotter.losElfos.add(elfoDobby);
-        JuegoHarryPotter.PersonajesJugables.add(elfoDobby);
+        JuegoHarryPotter.personajesJugables.add(elfoDobby);
 
     }
 
@@ -254,7 +256,6 @@ public class JuegoHarryPotter {
             petrificus.nombreHechizo = " Petrificus Totallus";
             petrificus.esOscuro = false;
             petrificus.nivelDaño = 100;
-            petrificus.nivelDefensa = 75;
 
             JuegoHarryPotter.hechizos.add(petrificus);
 
