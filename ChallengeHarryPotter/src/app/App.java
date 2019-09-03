@@ -21,7 +21,7 @@ public class App {
         Teclado.nextLine();
 
         System.out
-                .println("pulse 1 para elegir a Harry Potter o 2 para elegir a Severus Snape o 3 para elegir a Dobby");
+                .println("pulse 1 para elegir a Harry Potter o 2 para elegir a Severus Snape");
         Mago pj1 = (Mago) JuegoHarryPotter.ElegirPersonaje("Harry Potter");
         Mago pj2 = (Mago) JuegoHarryPotter.ElegirPersonaje("Severus Snape");
         int opcion = Teclado.nextInt();

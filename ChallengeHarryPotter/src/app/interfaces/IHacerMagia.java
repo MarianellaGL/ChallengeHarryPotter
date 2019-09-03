@@ -28,3 +28,4 @@ public interface IHacerMagia {
     void atacar(Personaje enemigo, Hechizo hechizo);
 
 }
+

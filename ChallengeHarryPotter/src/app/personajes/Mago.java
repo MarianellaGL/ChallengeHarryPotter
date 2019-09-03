@@ -15,7 +15,6 @@ public class Mago extends Personaje implements IHacerMagia {
     public boolean esMagoOscuro = false;
     public int nivelVida = 100;
     public String nombrePoderInicial;
-
     public List<Hechizo> hechizos = new ArrayList<Hechizo>();
     public List<Poder> losPoderes = new ArrayList<Poder>();
     public List<Artefacto> artefactos = new ArrayList<Artefacto>();
@@ -55,7 +54,6 @@ public class Mago extends Personaje implements IHacerMagia {
         return artefactos;
 
     }
-
     @Override
     public void getPoderInicial() {
 
@@ -79,16 +77,33 @@ public class Mago extends Personaje implements IHacerMagia {
     @Override
     public void atacar(Personaje enemigo, Hechizo hechizo) {
         enemigo.salud -= hechizo.nivelDaño;
+
         if(hechizo.esOscuro){
             hechizo.nivelDaño *=2;
 
             this.esMagoOscuro= true;
+            
+            System.out.println( nombre + " se ha mostrado como mago oscuro");}
 
-            System.out.println( nombre + " se ha mostrado como mago oscuro");
+        for (Artefacto ar : this.artefactos) {
+
+            // "te"guarda el objeto temporada "this" es yo mismo, el objeto mismo
+    
+            if (ar.esReliquia == true) {
+    
+              energiaMagica*= 2;
+            }
+    
+        }
+        
+    
+
+
+           
         }
     }
 
-}
+
 
 
 //niv daño 50 ampl daño 1.2 = dño total
