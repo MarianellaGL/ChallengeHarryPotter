@@ -10,8 +10,9 @@ public class Personaje {
 
     public List<Mago> LosMagos = new ArrayList<Mago>();
     public static List<Muggle> LosComunes = new ArrayList<Muggle>();
-    public static List<Elfo> losElfos = new ArrayList<Elfo>();
-    public static List<Criatura> losBichos = new ArrayList<Criatura>();
+    public List<Elfo> losElfos = new ArrayList<Elfo>();
+    public List<Criatura> losBichos = new ArrayList<Criatura>();
+    
 
     public Mago getMago(String nombre) {
 
@@ -22,17 +23,36 @@ public class Personaje {
             }
 
         return null;
+    }
+
+    public Criatura getCriatura(String nombreCriatura) {
+        for (Criatura cr: this.losBichos) 
+            if (cr.nombreCriatura == nombre ) {
+
+                return cr;
+            }
+
+            return null;
 
     }
 
+    public Elfo getElfo(String nombre) {
 
+        for (Elfo ef : this.losElfos)
+
+            if (ef.nombreCriatura == nombre) {
+
+                return ef;
+            }
+        return null;
+    }
 
     public boolean estaVivo() {
         if (salud > 0)
             return true;
 
         return false;
-    
 
-        }
+    }
+
 }

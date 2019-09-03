@@ -14,13 +14,13 @@ public class Mago extends Personaje implements IHacerMagia {
     public int energiaMagica = 40;
     public boolean esMagoOscuro = false;
     public int nivelVida = 100;
+    public String nombrePoderInicial;
 
     public List<Hechizo> hechizos = new ArrayList<Hechizo>();
     public List<Poder> losPoderes = new ArrayList<Poder>();
     public List<Artefacto> artefactos = new ArrayList<Artefacto>();
     public List<Transporte> gonnaRide = new ArrayList<Transporte>();
-    public boolean esReliquia;
-    public int amplificadorDaño;
+  
 
     public Poder getPoder() {
 
@@ -39,42 +39,61 @@ public class Mago extends Personaje implements IHacerMagia {
         this.poderInicial = poderInicial;
     }
 
-   
-
     @Override
     public void aprender(Hechizo h) {
-    }
-public List<Hechizo> getHechizos(){
 
-    return hechizos;
-}
+    
+    }
+
+    public List<Hechizo> getHechizos() {
+
+        return hechizos;
+    }
+
     @Override
     public List<Artefacto> getArtefactos() {
         return artefactos;
+
     }
 
     @Override
     public void getPoderInicial() {
-        
+
+      
+
+
+
     
-            //amplificar daño si vale uno devuelve si no te toma es porque hay que casteado 
+
+        // amplificar daño si vale uno devuelve si no te toma es porque hay que casteado
 
     }
 
     @Override
-	public void setPoderInicial( Poder p) {
-		
-	}
+    public void setPoderInicial(Poder p) {
+
+        
+
+    }
 
     @Override
     public void atacar(Personaje enemigo, Hechizo hechizo) {
-        enemigo.salud-=hechizo.nivelDaño;
+        enemigo.salud -= hechizo.nivelDaño;
+        if(hechizo.esOscuro){
+            hechizo.nivelDaño *=2;
 
+            this.esMagoOscuro= true;
+
+            System.out.println( nombre + " se ha mostrado como mago oscuro");
+        }
     }
 
-
-	
-	}
+}
 
 
-    
+//niv daño 50 ampl daño 1.2 = dño total
+//if(h.esoscuro) dañotot *=2
+//this.magooscuro= true;
+
+//if(this.energia>h.energia)
+//this.energia = h.energia;

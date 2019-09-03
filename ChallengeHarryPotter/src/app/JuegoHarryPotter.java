@@ -25,6 +25,12 @@ import app.personajes.Elfo;
 import app.personajes.Mago;
 import app.personajes.Muggle;
 import app.personajes.Personaje;
+import app.transportes.AlfombraVoladora;
+import app.transportes.AutobusNoctambulo;
+import app.transportes.Escoba;
+import app.transportes.ExpresoAHogwarts;
+import app.transportes.Giratiempo;
+import app.transportes.MotocicletaVoladoraSiriusB;
 import app.transportes.Transporte;
 
 public class JuegoHarryPotter {
@@ -65,8 +71,19 @@ public class JuegoHarryPotter {
 
     }
 
+    public static Transporte SubiteAlTransporte(String nombreTransporte) {
+        for (Transporte tr : JuegoHarryPotter.TransportesMagicos) {
+
+            if (tr.nombreTransporte.equals(nombreTransporte))
+
+                return tr;
+        }
+
+        return null;
+    }
+
     public static Hechizo ElegirHechizo(String nombreHechizo) {
-        for (Hechizo h: JuegoHarryPotter.hechizos) {
+        for (Hechizo h : JuegoHarryPotter.hechizos) {
 
             if (h.nombreHechizo.equals(nombreHechizo))
 
@@ -76,7 +93,6 @@ public class JuegoHarryPotter {
         return null;
 
     }
-
 
     public static void InicializarJuego() {
         AgregarPersonaje();
@@ -116,8 +132,8 @@ public class JuegoHarryPotter {
         elfoDobby.nombreCriatura = "Elfo Dobby";
         elfoDobby.ayudaAlMago = false;
         elfoDobby.estaVivo = true;
-        elfoDobby.magiaInicial = 1000;
-        elfoDobby.salud = 1800;
+        elfoDobby.magiaInicial = 100000;
+        elfoDobby.salud = 180000;
         elfoDobby.esDomestico = false;
 
         JuegoHarryPotter.losBichos.add(elfoDobby);
@@ -129,14 +145,16 @@ public class JuegoHarryPotter {
     public static void AgregarArtefacto() {
         CapaInvisibilidad cInvisibilidad = new CapaInvisibilidad();
         cInvisibilidad.nombreArtefacto = "Capa de Invisibilidad";
-        cInvisibilidad.amplificadorDaño =  0.25;
-        cInvisibilidad.amplificadorSalud =  10;
+        cInvisibilidad.amplificadorDaño = 0.25;
+        cInvisibilidad.amplificadorSalud = 10;
+      
         JuegoHarryPotter.artefactos.add(cInvisibilidad);
 
         VaritaSauco vSauco = new VaritaSauco();
         vSauco.nombreArtefacto = "Varita de Sauco";
         vSauco.amplificadorDaño = 20 * 0.25;
         vSauco.amplificadorSalud = 20 * 10;
+      
         JuegoHarryPotter.artefactos.add(vSauco);
 
         CopaHelgaHufflepuff hPuff = new CopaHelgaHufflepuff();
@@ -188,6 +206,37 @@ public class JuegoHarryPotter {
         JuegoHarryPotter.artefactos.add(varita);
     }
 
+    public static void SubiteAlTransporte() {
+        AlfombraVoladora alfombraVoladora = new AlfombraVoladora();
+        alfombraVoladora.nombreTransporte = "Alfombra Voladora";
+        JuegoHarryPotter.TransportesMagicos.add(alfombraVoladora);
+
+        MotocicletaVoladoraSiriusB motosirius = new MotocicletaVoladoraSiriusB();
+        motosirius.nombreTransporte = "Moto Sirius Black";
+        JuegoHarryPotter.TransportesMagicos.add(motosirius);
+
+        ExpresoAHogwarts eHogwarts = new ExpresoAHogwarts();
+        eHogwarts.nombreTransporte = "Expreso a Hogwarts";
+        JuegoHarryPotter.TransportesMagicos.add(eHogwarts);
+
+        AutobusNoctambulo aNoctambulo = new AutobusNoctambulo();
+        aNoctambulo.nombreTransporte = "Autobús Noctámbulo";
+        JuegoHarryPotter.TransportesMagicos.add(aNoctambulo);
+
+        Escoba escobaMagica = new Escoba();
+        escobaMagica.nombreTransporte = "Nimbus 2000";
+        JuegoHarryPotter.TransportesMagicos.add(escobaMagica);
+
+        Escoba escobaMagica2 = new Escoba();
+        escobaMagica2.nombreTransporte = "Saeta de Fuego";
+        JuegoHarryPotter.TransportesMagicos.add(escobaMagica);
+
+        Giratiempo giratiempo = new Giratiempo();
+        giratiempo.nombreTransporte = "Giratiempo mágico";
+        JuegoHarryPotter.TransportesMagicos.add(giratiempo);
+
+    }
+
     public static void ElegirHechizo() {
         {
 
@@ -209,7 +258,7 @@ public class JuegoHarryPotter {
             AvadaKedabra kedabra = new AvadaKedabra();
             kedabra.nombreHechizo = "Avada Kedabra";
             kedabra.esOscuro = true;
-            kedabra.nivelDaño = 100000;
+            kedabra.nivelDaño = 10000;
 
             JuegoHarryPotter.hechizos.add(kedabra);
 
@@ -219,7 +268,7 @@ public class JuegoHarryPotter {
             cruciatus.nivelDaño = 300;
 
             JuegoHarryPotter.hechizos.add(cruciatus);
-            
+
             Expelliarmus expelliarmus = new Expelliarmus();
             expelliarmus.nombreHechizo = "Expelliarmus";
             expelliarmus.esOscuro = false;
@@ -231,5 +280,4 @@ public class JuegoHarryPotter {
 
     }
 
-   
 }

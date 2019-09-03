@@ -14,12 +14,20 @@ public class Artefacto implements IEsMagico, IReliquiaMuerte{
     @Override
     public void esMagico(Transporte utilizado, Artefacto obtenido, Criatura ayudante) {
 
+        if (Artefacto.esReliquia){
+
+       amplificadorDaño *= 2;}
+
+
+
+
 }
 
     @Override
 	public boolean esReliquia(VaritaSauco vSauco, PiedraResurreccion pResurreccion, HorrorCrux hCrux,
 			CapaInvisibilidad cInvisibilidad) {
-		return true;
+        return true;
+     
     
             }
         

@@ -6,6 +6,8 @@ import app.personajes.Criatura;
 
 public class Transporte implements IEsMagico {
 
+    public String nombreTransporte;
+
     @Override
     public void esMagico(Transporte utilizado, Artefacto obtenido, Criatura ayudante) {
 		
