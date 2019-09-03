@@ -95,8 +95,7 @@ public class Mago extends Personaje implements IHacerMagia {
     
 
 
-            // "te"guarda el objeto temporada "this" es yo mismo, el objeto mismo
-    
+            
             if (ar.esReliquia == true) {
     
               enemigo.salud -= (hechizo.nivelDaño * ar.amplificadorDaño) +(energiaMagica*=2);

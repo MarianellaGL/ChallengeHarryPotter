@@ -114,7 +114,7 @@ public class JuegoHarryPotter {
         magoHarry.esMagoOscuro = false;
         magoHarry.energiaMagica = 40 + 80;
         magoHarry.poderInicial = 80 + 200;
-        magoHarry.salud = 100 + 300;
+        magoHarry.salud = + 3000;
 
         JuegoHarryPotter.losMagos.add(magoHarry);
         JuegoHarryPotter.personajesJugables.add(magoHarry);
@@ -125,7 +125,7 @@ public class JuegoHarryPotter {
         magoSnape.esMagoOscuro = false;
         magoSnape.energiaMagica = 40 + 150;
         magoSnape.poderInicial = 80 + 300;
-        magoSnape.salud = 100 + 50000;
+        magoSnape.salud = + 50000;
 
         JuegoHarryPotter.losMagos.add(magoSnape);
         JuegoHarryPotter.personajesJugables.add(magoSnape);
