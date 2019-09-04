@@ -228,12 +228,14 @@ public class JuegoHarryPotter {
             JuegoHarryPotter.transportesMagicos.add(aNoctambulo);
 
             Escoba escobaMagica = new Escoba();
-            escobaMagica.nombreTransporte = "Nimbus 2000";
+            escobaMagica.nombreTransporte = "Escoba mágica";
+            escobaMagica.modeloEscoba ="Nimbus 2000";
             JuegoHarryPotter.transportesMagicos.add(escobaMagica);
 
             Escoba escobaMagica2 = new Escoba();
-            escobaMagica2.nombreTransporte = "Saeta de Fuego";
-            JuegoHarryPotter.transportesMagicos.add(escobaMagica);
+            escobaMagica2.nombreTransporte = "Escoba mágica";
+            escobaMagica2.modeloEscoba= "Saeta de Fuego";
+            JuegoHarryPotter.transportesMagicos.add(escobaMagica2);
 
             Giratiempo giratiempo = new Giratiempo();
             giratiempo.nombreTransporte = "Giratiempo mágico";
