@@ -80,6 +80,7 @@ public class Mago extends Personaje implements IHacerMagia {
 
         for (Artefacto ar : this.artefactos) {
 
+            
             enemigo.salud -= (hechizo.nivelDaño * ar.amplificadorDaño);
 
             if (ar.esReliquia == true) {

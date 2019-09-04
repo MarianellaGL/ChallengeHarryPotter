@@ -222,7 +222,7 @@ public class App {
         if (pj1.salud == 0) {
             System.out.println(pj1.nombre + " Ha ganado el duelo.");
             System.out.println(
-                    pj1.nombre + " Ha subido en " + elTransporte.nombreTransporte + " Y se ha retirado victorioso");
+                    pj2.nombre + " Ha subido en " + elTransporte.nombreTransporte + " Y se ha retirado victorioso");
 
         } else if (pj2.salud == 0) {
 
@@ -234,7 +234,7 @@ public class App {
         } else {
             System.out.println(pj1.nombre + " Ha perdido el duelo ");
             System.out.println(
-                    pj1.nombre + " Ha subido en " + elTransporte.nombreTransporte + " Y se ha retirado victorioso");
+                    pj2.nombre + " Ha subido en " + elTransporte.nombreTransporte + " Y se ha retirado victorioso");
         }
     }
 
