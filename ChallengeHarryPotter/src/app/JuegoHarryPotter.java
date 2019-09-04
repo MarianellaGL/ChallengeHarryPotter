@@ -18,7 +18,6 @@ import app.hechizos.Expelliarmus;
 import app.hechizos.Hechizo;
 import app.hechizos.HechizoAtaque;
 import app.hechizos.MaleficioCruciatus;
-import app.hechizos.Parseltongue;
 import app.hechizos.PetrificusTotallus;
 import app.hechizos.SectumSempra;
 import app.personajes.Criatura;
@@ -114,7 +113,7 @@ public class JuegoHarryPotter {
         magoHarry.esMagoOscuro = false;
         magoHarry.energiaMagica = 40 + 80;
         magoHarry.poderInicial = 80 + 200;
-        magoHarry.salud = +3000;
+        magoHarry.salud = +5000;
 
         JuegoHarryPotter.losMagos.add(magoHarry);
         JuegoHarryPotter.personajesJugables.add(magoHarry);

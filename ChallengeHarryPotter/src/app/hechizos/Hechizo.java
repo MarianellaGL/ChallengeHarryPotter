@@ -6,6 +6,8 @@ import java.util.List;
 import app.artefactos.Artefacto;
 import app.interfaces.IHacerMagia;
 import app.personajes.Personaje;
+import app.transportes.Transporte;
+
 
 /**
  * Hechizo
@@ -46,8 +48,21 @@ public class Hechizo extends Poder implements IHacerMagia {
         return null;
     }
 
+
+
+	public void atacar(Artefacto elArtefacto) {
+             
+    }
+
     @Override
     public void atacar(Personaje enemigo, Hechizo hechizo) {
+      
+
+    }
+
+    @Override
+    public void atacar(Transporte elTransporte, Artefacto elArtefacto) {
+    
 
     }
 }

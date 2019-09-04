@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import app.artefactos.Artefacto;
 import app.hechizos.Hechizo;
+import app.interfaces.IEsMagico;
 import app.interfaces.IHacerMagia;
 import app.personajes.Mago;
 import app.transportes.Transporte;
@@ -82,6 +83,10 @@ public class App {
             elArtefacto = pFilosofal;
 
             System.out.println("Has elegido una reliquia de la muerte");
+            System.out
+                    .println("El poder actual de " + pj1.nombre + pj1.energiaMagica + " y su salud es de " + pj1.salud);
+            System.out
+                    .println("El poder actual de " + pj2.nombre + pj2.energiaMagica + " y su salud es de " + pj2.salud);
             break;
 
         case 2:
@@ -90,18 +95,29 @@ public class App {
             System.out.println("Has elegido un HorrorCrux");
             System.out
                     .println("El poder actual de " + pj1.nombre + pj1.energiaMagica + " y su salud es de " + pj1.salud);
+            System.out
+                    .println("El poder actual de " + pj2.nombre + pj2.energiaMagica + " y su salud es de " + pj2.salud);
             break;
         case 3:
             elArtefacto = sSlytherin;
             System.out.println("Has elegido el guardapelo de Salazar Sytherin");
+            System.out
+                    .println("El poder actual de " + pj1.nombre + pj1.energiaMagica + " y su salud es de " + pj1.salud);
+            System.out
+                    .println("El poder actual de " + pj2.nombre + pj2.energiaMagica + " y su salud es de " + pj2.salud);
             break;
         case 4:
             elArtefacto = tRiddle;
 
             System.out.println("Has elegido el Diario de Tom Riddle");
+            System.out
+                    .println("El poder actual de " + pj1.nombre + pj1.energiaMagica + " y su salud es de " + pj1.salud);
+            System.out
+                    .println("El poder actual de " + pj2.nombre + pj2.energiaMagica + " y su salud es de " + pj2.salud);
             break;
 
         default:
+            System.out.println("No hay más artefactos");
 
             break;
         }
@@ -149,8 +165,21 @@ public class App {
             break;
 
         default:
+            System.out.println("No hay más transportes");
 
             break;
+        }
+
+        if (pj1 instanceof IEsMagico) {
+
+            IEsMagico mago1 = (IEsMagico) pj1;
+            ((IHacerMagia) mago1).atacar(elTransporte, elArtefacto);
+
+            atacapj1 = !atacapj1;
+        } else if (pj2 instanceof IEsMagico) {
+            IEsMagico mago2 = (IEsMagico) pj2;
+            ((IHacerMagia) mago2).atacar(elTransporte, elArtefacto);
+
         }
 
         while (pj1.salud > 0 && pj2.salud > 0)
@@ -159,41 +188,41 @@ public class App {
 
             if (atacapj1) {
                 System.out.println(
-                        "Elegi el hechizo a utilizar 1 = Sectum Sempra, 2 = Avada Kedabra, 3= Expelliarmus, 4= Petrificus Totallus, 5= Maleficio Cruciatus");
+                        "Elegi el hechizo a utilizar 1 = Sectum Sempra, 2 = Avada Kedabra, 3= Expelliarmus, 4= Maleficio Cruciatus");
 
                 tipoHechizo = Teclado.nextInt();
 
                 Hechizo sempra = (Hechizo) JuegoHarryPotter.ElegirHechizo("Sectum Sempra");
                 Hechizo kedabra = (Hechizo) JuegoHarryPotter.ElegirHechizo("Avada Kedabra");
                 Hechizo expelliarmus = (Hechizo) JuegoHarryPotter.ElegirHechizo("Expelliarmus");
-                Hechizo petrificus = (Hechizo) JuegoHarryPotter.ElegirHechizo("Petrificus Totallus");
                 Hechizo cruciatus = (Hechizo) JuegoHarryPotter.ElegirHechizo("Maleficio Cruciatus");
 
                 switch (tipoHechizo) {
                 case 1:
                     hechizoAtacante = sempra;
-                    System.out.println(pj1.nombre + "Ha usado" + hechizoAtacante.nombreHechizo);
+                    System.out.println(pj1.nombre + " ha usado" + hechizoAtacante.nombreHechizo);
+
                     break;
 
                 case 2:
                     hechizoAtacante = kedabra;
                     System.out.println(pj1.nombre + " Ha usado " + hechizoAtacante.nombreHechizo);
+
                     break;
 
                 case 3:
                     hechizoAtacante = expelliarmus;
                     System.out.println(pj1.nombre + " Ha usado " + hechizoAtacante.nombreHechizo);
+
                     break;
                 case 4:
-                    hechizoAtacante = petrificus;
-                    System.out.println(pj1.nombre + " Ha usado " + hechizoAtacante.nombreHechizo);
-                    break;
-                case 5:
                     hechizoAtacante = cruciatus;
                     System.out.println(pj1.nombre + " Ha usado " + hechizoAtacante.nombreHechizo);
+
                     break;
 
                 default:
+                    System.out.println("No hay más hay hechizos disponibles en la opción");
                     break;
                 }
 
@@ -215,6 +244,7 @@ public class App {
             }
 
         }
+
         System.out.println("La salud de " + pj1.nombre + " es de " + pj1.salud);
         pj2.atacar(pj1, hechizoAtacante);
         System.out.println("La salud de " + pj2.nombre + " es de " + pj2.salud);

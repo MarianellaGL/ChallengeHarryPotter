@@ -1,5 +1,7 @@
 package app.personajes;
 
+import static app.interfaces.IReliquiaMuerte.esReliquia;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -78,19 +80,18 @@ public class Mago extends Personaje implements IHacerMagia {
     @Override
     public void atacar(Personaje enemigo, Hechizo hechizo) {
 
+        enemigo.salud -= hechizo.nivelDaño;
+
         for (Artefacto ar : this.artefactos) {
 
-            
-            enemigo.salud -= (hechizo.nivelDaño * ar.amplificadorDaño);
+            enemigo.salud -= (energiaMagica *= ar.amplificadorDaño);
 
-            if (ar.esReliquia == true) {
+            if (esReliquia) {
 
                 enemigo.salud -= (hechizo.nivelDaño * ar.amplificadorDaño) + (energiaMagica *= 2);
 
             }
         }
-
-        enemigo.salud -= hechizo.nivelDaño;
 
         if (hechizo.esOscuro) {
             hechizo.nivelDaño *= 2;
@@ -99,6 +100,12 @@ public class Mago extends Personaje implements IHacerMagia {
 
             System.out.println(nombre + " se ha mostrado como mago oscuro");
         }
+
+    }
+
+    @Override
+    public void atacar(Transporte elTransporte, Artefacto elArtefacto) {
+      
 
     }
 }
