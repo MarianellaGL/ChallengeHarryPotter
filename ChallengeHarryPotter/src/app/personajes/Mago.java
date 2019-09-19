@@ -25,7 +25,8 @@ public class Mago extends Personaje implements IHacerMagia {
     public Poder getPoder() {
 
         for (Poder p : losPoderes) {
-            if (p.nombrePoder.equals(nombre)) {
+            if (p.nombrePoder.equals(nombre))//arreglar//
+             {
 
                 return p;
             }
@@ -34,11 +35,15 @@ public class Mago extends Personaje implements IHacerMagia {
         return null;
 
     }
+    //setpoder no está  la busqueda es erronea ya que busca por el nombre del mago
+
 
     public Transporte getTransporte() {
 
         for (Transporte t : transportesMagicos)
-            if (t.nombreTransporte.equals(nombre)) {
+            if (t.nombreTransporte.equals(nombre)) 
+            // deberia ir el nombre como parametro
+            {
                 return t;
             }
 

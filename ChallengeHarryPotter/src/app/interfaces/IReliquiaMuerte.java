@@ -14,5 +14,9 @@ public interface IReliquiaMuerte {
             CapaInvisibilidad cInvisibilidad);
 
     boolean esReliquia = true;
+    //estonova
+    
 
 }
+// Interfaces erroneas
+//lista de metodos que van a tener en comun clases.
